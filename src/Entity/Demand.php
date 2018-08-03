@@ -36,6 +36,12 @@ class Demand
      */
     private $certificate_date;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+
     public function getId()
     {
         return $this->id;
@@ -85,6 +91,18 @@ class Demand
     public function setCertificateDate(\DateTimeInterface $certificate_date): self
     {
         $this->certificate_date = $certificate_date;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }

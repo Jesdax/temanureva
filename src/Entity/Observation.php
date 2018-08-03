@@ -46,6 +46,23 @@ class Observation
      */
     private $image;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $observer;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     */
+    private $validator;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Bird")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $bird;
+
     public function getId()
     {
         return $this->id;
@@ -119,6 +136,42 @@ class Observation
     public function setImage(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getObserver(): ?User
+    {
+        return $this->observer;
+    }
+
+    public function setObserver(?User $observer): self
+    {
+        $this->observer = $observer;
+
+        return $this;
+    }
+
+    public function getValidator(): ?User
+    {
+        return $this->validator;
+    }
+
+    public function setValidator(?User $validator): self
+    {
+        $this->validator = $validator;
+
+        return $this;
+    }
+
+    public function getBird(): ?Bird
+    {
+        return $this->bird;
+    }
+
+    public function setBird(?Bird $bird): self
+    {
+        $this->bird = $bird;
 
         return $this;
     }
