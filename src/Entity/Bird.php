@@ -176,17 +176,6 @@ class Bird
      */
     private $image;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Habitat")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $habitat;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\BiogeographicStatus")
-     */
-    private $biogeographicStatus;
-
     public function getId()
     {
         return $this->id;
@@ -572,30 +561,6 @@ class Bird
     public function setImage(string $image): self
     {
         $this->image = $image;
-
-        return $this;
-    }
-
-    public function getHabitat(): ?Habitat
-    {
-        return $this->habitat;
-    }
-
-    public function setHabitat(?Habitat $habitat): self
-    {
-        $this->habitat = $habitat;
-
-        return $this;
-    }
-
-    public function getBiogeographicStatus(): ?BiogeographicStatus
-    {
-        return $this->biogeographicStatus;
-    }
-
-    public function setBiogeographicStatus(?BiogeographicStatus $biogeographicStatus): self
-    {
-        $this->biogeographicStatus = $biogeographicStatus;
 
         return $this;
     }
