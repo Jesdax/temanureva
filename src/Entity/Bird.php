@@ -42,17 +42,17 @@ class Bird
     private $family;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
     private $cd_name;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
     private $cd_taxsup;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
     private $cd_ref;
 
@@ -90,6 +90,12 @@ class Bird
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $vernacular_name_eng;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $habitat;
+
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -176,16 +182,6 @@ class Bird
      */
     private $image;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Habitat")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $habitat;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\BiogeographicStatus")
-     */
-    private $BiogeographicStatus;
 
     public function getId()
     {
@@ -588,15 +584,4 @@ class Bird
         return $this;
     }
 
-    public function getBiogeographicStatus(): ?BiogeographicStatus
-    {
-        return $this->BiogeographicStatus;
-    }
-
-    public function setBiogeographicStatus(?BiogeographicStatus $BiogeographicStatus): self
-    {
-        $this->BiogeographicStatus = $BiogeographicStatus;
-
-        return $this;
-    }
 }

@@ -11,12 +11,6 @@ class BiogeographicStatus
 {
     /**
      * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-
-    /**
      * @ORM\Column(type="string", length=10)
      */
     private $status;
@@ -25,11 +19,6 @@ class BiogeographicStatus
      * @ORM\Column(type="string", length=255)
      */
     private $description;
-
-    public function getId()
-    {
-        return $this->id;
-    }
 
     public function getStatus(): ?string
     {
