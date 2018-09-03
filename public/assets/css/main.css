@@ -205,6 +205,11 @@ nav {
     background-color: #a1887f;
 }
 
+/*---- observation ----*/
+.map-observation{
+    height: 21rem;
+}
+
 /*---- profile ----*/
 .border-teal-bottom{
     border-bottom: #01796F 4px solid;
@@ -391,6 +396,11 @@ nav {
 
 .full-width{
     width: 100%;
+}
+
+.margin-y{
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .margin-t{

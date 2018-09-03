@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Observation - NAO{% endblock %}
+
+{% block body %}
+    {{ include('common/header.html.twig', {'title' : 'Observation'}) }}
+    {{ include('common/breadcrumb.html.twig', {'breadcrumb' : breadcrumb }) }}
+    <div class="row container margin-t">
+        <div class="row">
+            <div class="col s12 l6">
+                <img src="#" alt="photo-observarion" class="responsive-img border-teal">
+            </div>
+            <div class="col s12 l6">
+                <div class="row">
+                    <h3 class="col s12">Nom de l'espèce</h3>
+                    <div class="col s12 margin-y">Observateur :</div>
+                    <div class="col s12 margin-y">Date d'observation : jj/mm/aaaa </div>
+                    <div class="col s12 margin-y">Date d'ajout : jj/mm/aaaa</div>
+                    <div class="col s12 margin-y">Localisation</div>
+                    <div class="col s12 margin-y">Demande en cour de validation</div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-t margin-b">
+            <div class="col s12 grey lighten-2 map-observation">
+                //LA CARTE
+            </div>
+        </div>
+    </div>
+{% endblock %}
