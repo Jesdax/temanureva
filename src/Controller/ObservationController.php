@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Observation;
 use App\Form\ObservationType;
+use App\Service\BreadcrumbManager;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -40,6 +41,19 @@ class ObservationController extends Controller
 
         return $this->render('back/add_observation.html.twig', [
             'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/observation", name="view_observation")
+     * @param Request $request
+     */
+    public function viewObservation(Request $request){
+        $breadcrumb = new BreadcrumbManager();
+
+        $breadcrumb->add('view_observation', 'Observation');
+        return $this->render('front/observation.html.twig',[
+            'breadcrumb' => $breadcrumb->getBreadcrumb()
         ]);
     }
 }
