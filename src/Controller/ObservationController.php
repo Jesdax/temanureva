@@ -45,10 +45,10 @@ class ObservationController extends Controller
     }
 
     /**
-     * @Route("/observation", name="view_observation")
+     * @Route("/observation/{id}", name="view_observation")
      * @param Request $request
      */
-    public function viewObservation(Request $request){
+    public function viewObservation(Request $request, $id){
         $breadcrumb = new BreadcrumbManager();
 
         $breadcrumb->add('view_observation', 'Observation');
