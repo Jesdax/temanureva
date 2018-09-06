@@ -11,14 +11,34 @@
                 <img src="#" alt="photo-observarion" class="responsive-img border-teal">
             </div>
             <div class="col s12 l6">
+                {% if observation.status == 0 %}
+                    {{ form_start(form) }}
+                {% endif %}
                 <div class="row">
-                    <h3 class="col s12">Nom de l'espèce</h3>
-                    <div class="col s12 margin-y">Observateur :</div>
-                    <div class="col s12 margin-y">Date d'observation : jj/mm/aaaa </div>
-                    <div class="col s12 margin-y">Date d'ajout : jj/mm/aaaa</div>
-                    <div class="col s12 margin-y">Localisation</div>
-                    <div class="col s12 margin-y">Demande en cour de validation</div>
+                    <h3 class="col s12">
+                        {% if observation.status == 0 %}
+                            {{ form_row(form.bird) }}
+                        {% else %}
+                            {{ observation.bird.lbName }}
+                        {% endif %}
+                    </h3>
+                    <div class="col s12 margin-y">Observateur : <a href="{{ path('profil', {'id' : observation.observer.id}) }}">{{ observation.observer.lastname }} {{ observation.observer.firstname }}</a></div>
+                    <div class="col s12 margin-y">Date d'observation : {{ observation.observationDate|date("d/m/Y") }} </div>
+                    <div class="col s12 margin-y">Date d'ajout : {{ observation.addingDate|date("d/m/Y") }}</div>
+                    <div class="col s12 margin-y">Localisation : </div>
+                    {% if observation.status == 0 %}
+                        <div class="col s12 margin-y">
+                            Demande en cour de validation
+                        </div>
+                        <div class="col s12 margin-y">
+                            {{ form_widget(form.valide) }}
+                            {{ form_widget(form.decline) }}
+                        </div>
+                    {% endif %}
                 </div>
+                {% if observation.status == 0 %}
+                    {{ form_end(form) }}
+                {% endif %}
             </div>
         </div>
         <div class="row margin-t margin-b">

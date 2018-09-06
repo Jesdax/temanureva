@@ -19,6 +19,15 @@ class ObservationRepository extends ServiceEntityRepository
         parent::__construct($registry, Observation::class);
     }
 
+    public function findById($id){
+        $qb = $this->createQueryBuilder('o')
+            ->andWhere('o.id = :id')
+            ->setParameter('id', $id)
+            ->getQuery();
+
+        return $qb->getSingleResult();
+    }
+
 //    /**
 //     * @return Observation[] Returns an array of Observation objects
 //     */
