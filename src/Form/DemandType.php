@@ -32,7 +32,7 @@ class DemandType extends AbstractType
                 'format' => 'dd/MM/yyyy',
             ])
             ->add('certificate', FileType::class, [
-                'label' => "Copie de l'asttestation",
+                'label' => "Copie de l'attestation",
                 'help' => '*Format acceptés: JPG, PNG, PDF'
             ])
             ->add('submit', SubmitType::class, ['label' => 'Envoyer la demande']);

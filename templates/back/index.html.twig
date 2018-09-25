@@ -20,7 +20,7 @@
                         <a href="{{ path('mes_observations') }}" class="btn btn-round btn-brown">Mes observations</a>
                     {% endif %}
                     {% if is_granted('ROLE_ADMIN') %}
-                        <a href="{{ path('waiting-observation') }}" class="btn btn-round btn-brown">Observation en attente</a>
+                        <a href="{{ path('waiting-observation') }}" class="btn btn-round btn-brown">Observation(s) en attente</a>
                     {% endif %}
                     {% if is_granted('ROLE_EDITOR') or is_granted('ROLE_ADMIN') %}
                         <a href="{{ path('gerer-articles') }}" class="btn btn-round btn-brown">Gérer les articles</a>
@@ -42,7 +42,7 @@
     <div class="">
     <div class="row margin-t link-teal">
 
-        {#---- Présetation ----#}
+        {#---- Présentation ----#}
         <div class="col s12 l{{ col_width }}">
             <div class="card-panel card-profile">
                 <div class="card-title valign-wrapper ">
@@ -60,7 +60,8 @@
             </div>
         </div>
 
-        {#---- Dernier activité ----#}
+        {#---- Dernières activités ----#}
+        {% if is_granted('ROLE_PARTICULAR') or is_granted('ROLE_NATURALIST') or is_granted('ROLE_ADMIN') %}
         <div class="col s12 l{{ col_width }}">
             <div class="card-panel card-profile">
                 <div class="card-title valign-wrapper">
@@ -78,18 +79,18 @@
                                 {% else %}
                                     {{ observation.bird.vernacularName }}
                                 {% endif %}
-                            </a><i> (
+                            </a><em> (
                             {% if observation.bird == null %}
                                 -
                             {% else %}
                                 {{ observation.bird.lbName }}
-                            {% endif %})</i>
+                            {% endif %})</em>
                         </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
-
+        {% endif %}
         {#---- Validation ----#}
         {% if is_granted('ROLE_NATURALIST') or is_granted('ROLE_ADMIN') %}
         <div class="col s12 l{{ col_width }}">
@@ -103,7 +104,7 @@
                     {% for validation in validations %}
                         <div class="col s12">
                             <span>Observation validée : </span><br>
-                            <a href="{{ path('view_observation', { "id" : validation.id}) }}">{{ validation.bird.vernacularName }}</a><i> ({{ validation.bird.lbName }})</i>
+                            <a href="{{ path('view_observation', { "id" : validation.id}) }}">{{ validation.bird.vernacularName }}</a><em> ({{ validation.bird.lbName }})</em>
                         </div>
                     {% endfor %}
                 </div>
@@ -142,11 +143,11 @@
                 <a href="{{ path('demand') }}" class="btn btn-round btn-brown">Demande naturaliste</a>
             {% endif %}
             {% if is_granted('ROLE_NATURALIST') %}
-                <a href="{{ path('waiting-observation') }}" class="btn btn-round btn-brown">Observation en attente</a>
+                <a href="{{ path('waiting-observation') }}" class="btn btn-round btn-brown">Observation(s) en attente</a>
             {% endif %}
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="#" class="btn btn-round btn-brown">Gérer Utilisateur </a>
-                <a href="{{ path('waiting-demand') }}" class="btn btn-round btn-brown">Certifier un naturlaiste</a>
+                <a href="{{ path('waiting-demand') }}" class="btn btn-round btn-brown">Certifier un naturaliste</a>
             {% endif %}
             <a href="{{ path('security_logout') }}" class="btn btn-round btn-brown">Déconnexion</a>
         </div>
