@@ -1,116 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae827ffd-a68c-4df8-9764-e4118aa3748f" name="Default Changelist" comment="Merge conflit">
+    <list default="true" id="e66b6eae-1579-48d1-ad4c-42b5ad7c709a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/files/demand/10198681dc5a588a8783e1fc3a7a02a2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/observation/4b00e5e69e4449035a7ab73929e5fee8.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/specie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/specie.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BirdController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BirdController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Observation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Observation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/BirdRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/BirdRepository.php" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/vendor/composer/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/cache/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/collections/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/common/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/data-fixtures/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/dbal/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/event-manager/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/inflector/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/instantiator/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/lexer/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/migrations/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/orm/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/persistence/" />
-    <ignored path="$PROJECT_DIR$/vendor/doctrine/reflection/" />
-    <ignored path="$PROJECT_DIR$/vendor/easycorp/easy-log-handler/" />
-    <ignored path="$PROJECT_DIR$/vendor/egulias/email-validator/" />
-    <ignored path="$PROJECT_DIR$/vendor/fig/link-util/" />
-    <ignored path="$PROJECT_DIR$/vendor/jdorn/sql-formatter/" />
-    <ignored path="$PROJECT_DIR$/vendor/monolog/monolog/" />
-    <ignored path="$PROJECT_DIR$/vendor/nikic/php-parser/" />
-    <ignored path="$PROJECT_DIR$/vendor/ocramius/package-versions/" />
-    <ignored path="$PROJECT_DIR$/vendor/ocramius/proxy-manager/" />
-    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common/" />
-    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock/" />
-    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver/" />
-    <ignored path="$PROJECT_DIR$/vendor/psr/cache/" />
-    <ignored path="$PROJECT_DIR$/vendor/psr/container/" />
-    <ignored path="$PROJECT_DIR$/vendor/psr/link/" />
-    <ignored path="$PROJECT_DIR$/vendor/psr/log/" />
-    <ignored path="$PROJECT_DIR$/vendor/psr/simple-cache/" />
-    <ignored path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/sensiolabs/security-checker/" />
-    <ignored path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/asset/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/browser-kit/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/cache/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/config/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/console/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/css-selector/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/debug/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/debug-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/debug-pack/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/dependency-injection/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/dom-crawler/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/dotenv/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/event-dispatcher/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/expression-language/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/filesystem/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/finder/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/flex/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/form/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/framework-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/http-foundation/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/http-kernel/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/inflector/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/intl/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/maker-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/monolog-bridge/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/options-resolver/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/orm-pack/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-php72/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/process/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/profiler-pack/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/property-access/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/property-info/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/routing/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/security/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/security-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/serializer/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/serializer-pack/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/stopwatch/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/test-pack/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/translation/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/twig-bridge/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/twig-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/validator/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/var-dumper/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/web-link/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/web-server-bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/webpack-encore-pack/" />
-    <ignored path="$PROJECT_DIR$/vendor/symfony/yaml/" />
-    <ignored path="$PROJECT_DIR$/vendor/twig/twig/" />
-    <ignored path="$PROJECT_DIR$/vendor/webmozart/assert/" />
-    <ignored path="$PROJECT_DIR$/vendor/zendframework/zend-code/" />
-    <ignored path="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -146,49 +51,22 @@
     <session id="-2091412715">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="4" />
-          <entry key="gif" value="1" />
-          <entry key="jpeg" value="3" />
-          <entry key="js" value="29" />
-          <entry key="observation" value="1" />
-          <entry key="php" value="34" />
-          <entry key="twig" value="23" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="4" />
-          <entry key="Database Element" value="1" />
-          <entry key="Image" value="4" />
-          <entry key="JavaScript" value="29" />
-          <entry key="PHP" value="34" />
-          <entry key="Twig" value="23" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="125" />
-          <entry key="php" value="44" />
-          <entry key="twig" value="462" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="125" />
-          <entry key="PHP" value="44" />
-          <entry key="Twig" value="462" />
           <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.32" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -200,8 +78,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/front/specie.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+                <state relative-caret-position="484">
+                  <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -210,7 +88,7 @@
             <entry file="file://$PROJECT_DIR$/src/Controller/BirdController.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="266">
-                  <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
+                  <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -241,7 +119,7 @@
             <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="389">
-                  <caret line="570" column="17" selection-start-line="570" selection-start-column="17" selection-end-line="570" selection-end-column="17" />
+                  <caret line="570" column="18" selection-start-line="570" selection-start-column="18" selection-end-line="570" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -250,14 +128,6 @@
       </split-second>
     </splitter>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>form_row</find>
-      <find>.col</find>
-      <find>.container-</find>
-      <find>.responsive</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -265,20 +135,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/public/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/Form/modifyProfileType.php" />
-        <option value="$PROJECT_DIR$/src/Form/DemandType.php" />
-        <option value="$PROJECT_DIR$/templates/front/observation.html.twig" />
-        <option value="$PROJECT_DIR$/public/assets/js/mapContact.js" />
-        <option value="$PROJECT_DIR$/templates/front/contact.html.twig" />
-        <option value="$PROJECT_DIR$/templates/front/register.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/UserType.php" />
-        <option value="$PROJECT_DIR$/src/Controller/BirdController.php" />
-        <option value="$PROJECT_DIR$/templates/front/birds.html.twig" />
-        <option value="$PROJECT_DIR$/public/assets/css/main.css" />
-        <option value="$PROJECT_DIR$/templates/front/specie.html.twig" />
       </list>
     </option>
   </component>
@@ -287,122 +143,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
-    <include_path>
-      <path value="$PROJECT_DIR$/vendor/symfony/debug-pack" />
-      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/orm-pack" />
-      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
-      <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
-      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
-      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
-      <path value="$PROJECT_DIR$/vendor/symfony/serializer-pack" />
-      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
-      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/vendor/symfony/test-pack" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
-      <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
-      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
-      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
-      <path value="$PROJECT_DIR$/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/vendor/psr/link" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/psr/cache" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
-      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
-      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
-      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
-      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
-      <path value="$PROJECT_DIR$/vendor/symfony/config" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/form" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
-      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-pack" />
-    </include_path>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2817" />
-    <option name="y" value="27" />
-    <option name="width" value="897" />
-    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -435,6 +175,11 @@
             <path>
               <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -493,10 +238,6 @@
       </pane>
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.console.LAST_STATE" value="true" />
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -538,18 +279,17 @@
       <workItem from="1537716189377" duration="2917000" />
       <workItem from="1537792911355" duration="4330000" />
       <workItem from="1537826849666" duration="2471000" />
-      <workItem from="1537868387776" duration="7416000" />
+      <workItem from="1537868387776" duration="7669000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25976000" />
+    <option name="totallyTimeSpent" value="52000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14222468" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14222468" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -563,9 +303,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32972974" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32972974" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.26702702" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.26702702" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32983193" />
-      <window_info anchor="bottom" id="Database Console" order="12" visible="true" weight="0.32864866" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32864866" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="bottom" id="TypeScript" order="14" sideWeight="0.4994664" weight="0.3293348" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -597,35 +337,6 @@
       <window_info anchor="right" id="Database" order="3" weight="0.32982844" />
     </layout-to-restore>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -634,289 +345,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="Merge conflit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Repository/ObservationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-436">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Observation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="106" column="46" selection-start-line="106" selection-start-column="46" selection-end-line="106" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/vendor.js" />
-    <entry file="file://$PROJECT_DIR$/assets/js/speciesAutocomplete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="67" lean-forward="true" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Demand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/back/modify_profile.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/files/demand/dbb77a8caf793f4ad1eba493fbef3a3d.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/profile/img/297426ab2dc2e2154036ce87ca17bd66.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/DemandController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/demand/demand.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/exploration.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/materialize.js">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-259" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/exploAutocomplete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/mapContact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/back/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="85" column="44" lean-forward="true" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/contact.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/LoginType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/modifyProfileType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/NewsletterType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ObservationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ReinitializeType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/UserType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/SearchType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ForgetPasswordType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ExploSearchType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="43" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/DemandType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ContactType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/CertifyType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/BirdListType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/BirdAutocompleteSelectorType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ArticleWhitoutImageType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ArticleType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/img/observation/f782125eedfdb212f94557e92c9d61d8.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/img/observation/f3a72262c8b51cf37776dc25254fbd67.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ObservationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="146" column="41" selection-start-line="146" selection-start-column="41" selection-end-line="146" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/observation.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/mapObser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#6#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/birds.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://dfeca0e7-191c-4ab6-9530-b76b212f84a9/schema/temanureva/table/observation">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/BirdController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="875" column="23" selection-start-line="875" selection-start-column="23" selection-end-line="875" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/specie.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+        <state relative-caret-position="484">
+          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
         </state>
       </provider>
     </entry>

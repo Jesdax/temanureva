@@ -129,11 +129,13 @@ class BirdRepository extends ServiceEntityRepository
     public function findByFamily($offset, $limit, $sorting, $family)
     {
         return $qb = $this->createQueryBuilder('b')
-            ->select('b')
+            ->select('b, count(o) as nbObsValid')
+            ->leftJoin('b.observations', 'o',  Expr\Join::WITH, 'o.bird = b.id AND o.status =1')
             ->where('b.family = :family')
             ->setFirstResult($offset)
             ->setMaxResults($limit)
             ->setParameter('family', $family)
+            ->groupBy('b')
             ->orderBy('b.vernacularName', $sorting)
             ->getQuery()
             ->getArrayResult();

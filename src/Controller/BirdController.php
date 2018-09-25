@@ -42,30 +42,23 @@ class BirdController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $nbBirds = $birdRepository->getNumberBirds();
             $sort = $form['sort']->getData();
+
             $sorting = $sort === 0 ? 'ASC' : 'DESC';
-
-            //dump($sorting);die;
-
+            
             if (isset($_GET['famille'])){
                 $birds = $birdRepository->findByFamily(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $_GET['famille']);
+                $nbBirds = count($birds);
+
             } else if (isset($_GET['id'])) {
                 // find bird by id
             } else {
                 $birds = $birdRepository->findByVernacularName(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $_GET['id']);
             }
             $pagination = new PaginationManager($page, $nbBirds, self::NBR_BIRDS_PER_PAGE, self::PAGINATION_DISPLAY_BIRDS, 'oiseaux');
-            /*case ($sort = 2):
-                $birds = $birdRepository->findByNbObservation(($page-1)*self::NBR_BIRDS_PER_PAGE,self::NBR_BIRDS_PER_PAGE, $sorting);
-                $pagination = new PaginationManager($page, $nbBirds, self::NBR_BIRDS_PER_PAGE, self::PAGINATION_DISPLAY_BIRDS, 'oiseaux');
-                break;
-            case ($sort = 3) :
-                $sorting = 'DESC';
-                $birds = $birdRepository->findByNbObservation(($page-1)*self::NBR_BIRDS_PER_PAGE,self::NBR_BIRDS_PER_PAGE, $sorting);
-                $pagination = new PaginationManager($page, $nbBirds, self::NBR_BIRDS_PER_PAGE, self::PAGINATION_DISPLAY_BIRDS, 'oiseaux');
-                break;*/
-            //} // rajouter order dans render, possible à null
+
             return $this->render('front/birds.html.twig', [
                 'birds' => $birds,
                 'pagination' => $pagination,
@@ -87,44 +80,7 @@ class BirdController extends Controller
                 'sorting' => $sorting
             ]);
         }
-        /*
-                // Database request
-                $repository = $this->getDoctrine()->getRepository(Bird::class);
-                $birds = $repository->findByvernacularName(($page-1)*self::NBR_BIRDS_PER_PAGE,self::NBR_BIRDS_PER_PAGE);
-                $nbBirds = $repository->getNumberBirds();
-                //Insert pagination
-                $pagination =  new PaginationManager($page, $nbBirds,self::NBR_BIRDS_PER_PAGE,self::PAGINATION_DISPLAY_BIRDS, 'oiseaux');
-                //Insert breadcrumb
-                $breadcrumb = new BreadcrumbManager();
-                $breadcrumb
-                    ->add('oiseaux', 'Espèces');
-                $form->handleRequest($request);
-                if ($form->isSubmitted() && $form->isValid()){
-                    $sort = $form['sort']->getData();
-                    switch ($sort) {
-                        case ($sort = 1 ) :
-                            $birds = $repository->findByDescVernacularName(($page-1)*self::NBR_BIRDS_PER_PAGE,self::NBR_BIRDS_PER_PAGE);
-                            break;
-                        /*case ($sort = 2):
-                            $brice = $repository->findByvernacularName(($page-1)*self::NBR_BIRDS_PER_PAGE,self::NBR_BIRDS_PER_PAGE);
-                            break;
-                        case ($sort = 3) :
-                            $birds = $repository->findByvernacularName(($page-1)*self::NBR_BIRDS_PER_PAGE,self::NBR_BIRDS_PER_PAGE);
-                            break;
-                    }
-                    return $this->render('front/birds.html.twig', [
-                        'birds' => $birds,
-                        'pagination' => $pagination,
-                        'breadcrumb' => $breadcrumb->getBreadcrumb(),
-                        'form' => $form->createView()
-                    ]);
-                }
-                return $this->render('front/birds.html.twig', [
-                    'birds' => $birds,
-                    'pagination' => $pagination,
-                    'breadcrumb' => $breadcrumb->getBreadcrumb(),
-                    'form' => $form->createView()
-                ]);*/
+
     }
     /**
      * @return \Symfony\Component\HttpFoundation\Response

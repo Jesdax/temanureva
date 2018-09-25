@@ -876,13 +876,13 @@ footer a, footer h4 {
     margin-top: 2.5rem;
 }
 .title-card-my-observations {
-    font-size: 1.25em;
-    font-family: Roboto light;
+    font: 300 1.25em "Roboto";
+    padding-left: 10px;
 }
 
 .content-card-my-observations {
-    font-size: 1.25em;
-    font-family: Roboto light;
+    font: 300 1.25em "Roboto";
+    padding-left: 10px;
     font-style: italic;
 }
 
