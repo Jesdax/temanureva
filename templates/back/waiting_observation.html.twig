@@ -3,7 +3,7 @@
 {% block title %}Observation en attente - NAO{% endblock %}
 
 {% block body %}
-    {{ include('common/header.html.twig', {'title' : 'Observations en attentes'}) }}
+    {{ include('common/header.html.twig', {'title' : 'Observations en attente'}) }}
     {{ include('common/breadcrumb.html.twig', {'breadcrumb' : breadcrumb }) }}
     <div class="row container margin-t">
         {% for observation in observations %}
@@ -22,7 +22,13 @@
                     </div>
                     <div class="card-bottom">
                         <div class="card-content">
-                            <p class="center card-title card-title-blog">{{ observation.bird.vernacularName }}</p>
+                            <p class="center card-title card-title-blog">
+                                {% if observation.bird == null %}
+                                    Espèce non connue
+                                {% else %}
+                                    {{ observation.bird.vernacularName }}
+                                {% endif %}
+                            </p>
                             <p class="center card-author">Observation envoyée le {{ observation.addingDate|date("d/m/Y") }}</p>
                         </div>
                         <div class="center card-action">

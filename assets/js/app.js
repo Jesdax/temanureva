@@ -20,20 +20,21 @@ var app = new Vue({
                 console.log (item.id)
                 $('#observation_bird').val(item.id)
                 // il récupère l'id pour le mettre dans  #observation-bird (champ caché)
-                //tester avec l'ajout d'un autre $('#gnagna...)
+
             }
         });
 
-        $('input.autocomplete').autocomplete({
+        /*$('input.autocomplete').autocomplete({
             onAutocomplete: (v) => { // function (v) {return v} >>> on clique, ça fait quelque chose
                 let item = this.items.find(i => {
                     return i.name === v
                 })
-                $('#valide_observation_bird').setValue(item.id)
+                console.log(item.id)
+                $('#valide_observation_bird').val(item.id);
                 // il récupère l'id pour le mettre dans  #observation-bird (champ caché)
-                //tester avec l'ajout d'un autre $('#gnagna...)
+
             }
-        });
+        });*/
     },
     /**
      * methods >>> on met tout ce que l'on veut exécuter

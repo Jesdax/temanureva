@@ -177,7 +177,7 @@ class ObservationController extends Controller
         $breadcrumb = new BreadcrumbManager();
         $breadcrumb
             ->add('profil', 'Mon profil')
-            ->add('waiting-observation', 'Obervations en attente');
+            ->add('waiting-observation', 'Observations en attente');
 
         return $this->render('back/waiting_observation.html.twig',[
             'breadcrumb' => $breadcrumb->getBreadcrumb(),

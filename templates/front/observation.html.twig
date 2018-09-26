@@ -17,10 +17,10 @@
                 <div class="row">
                     <h3 class="col s12">
                         {% if observation.status == 0 %}
-                            <div class="col s12 m6" id="observation-autocomplete">
+                            <div class="col s12 m6" id="validObservation-autocomplete">
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input type="text" id="autocomplete-input"  @input="search" class="autocomplete" autocomplete="off" placeholder="{{ observation.bird.vernacularName }}">
+                                        <input type="text" id="autocomplete-valid-input"  @input="search" class="autocomplete" autocomplete="off" placeholder="{{ observation.bird.vernacularName }}">
                                         <label for="autocomplete-input">Nom de l'espèce</label>
                                     </div>
                                 </div>
@@ -53,5 +53,5 @@
 {% endblock %}
 
 {% block autocomplete %}
-    <script src="{{ asset('build/app.js') }}"></script>
+    <script src="{{ asset('build/validObsAutocomplete.js') }}"></script>
 {% endblock %}
