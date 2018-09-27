@@ -52,7 +52,7 @@ var app = new Vue({
                 }
             )
         },
-        searchFamily (v) {  // "lié" à @input = search dans html.twig >>> passe l'élément en entier (v = event)
+        searchFamily (v) {
             axios.get('/familyList?name='+v.target.value).then( //.then permet d'attendre la réponse de la fonction asynchrone axios.get
                 response => {
                     $('input#family-input').css('border-bottom', '1px solid green')
