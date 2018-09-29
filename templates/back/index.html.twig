@@ -63,7 +63,7 @@
         </div>
 
         {#---- Dernières activités ----#}
-        {% if is_granted('ROLE_PARTICULAR') or is_granted('ROLE_NATURALIST') or is_granted('ROLE_ADMIN') %}
+        {% if (app.user.id is same as(user.id) and is_granted(['ROLE_PARTICULAR', 'ROLE_NATURALIST', 'ROLE_ADMIN'])) or user.roles[0] != 'ROLE_EDITOR'%}
         <div class="col s12 l{{ col_width }}">
             <div class="card-panel card-profile">
                 <div class="card-title valign-wrapper">
@@ -94,7 +94,7 @@
         </div>
         {% endif %}
         {#---- Validation ----#}
-        {% if is_granted('ROLE_NATURALIST') or is_granted('ROLE_ADMIN') %}
+        {% if app.user.id is same as(user.id) and is_granted(['ROLE_NATURALIST','ROLE_ADMIN']) %}
         <div class="col s12 l{{ col_width }}">
             <div class="card-panel card-profile">
                 <div class="card-title valign-wrapper">
@@ -115,7 +115,7 @@
         {% endif %}
 
         {#---- Article ----#}
-        {% if is_granted('ROLE_EDITOR') or is_granted('ROLE_ADMIN') %}
+        {% if (app.user.id is same as(user.id) and is_granted(['ROLE_ADMIN', 'ROLE_EDITOR'])) or user.roles[0] == 'ROLE_EDITOR'  %}
         <div class="col s12 l{{ col_width }}">
             <div class="card-panel card-profile">
                 <div class="card-title valign-wrapper">
