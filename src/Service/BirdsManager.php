@@ -21,12 +21,24 @@ class BirdsManager
     private $storage;
     private $imageDirectory;
 
-    public function __construct(EntityManagerInterface $entityManager, FileManager $fileManager, TokenStorageInterface $storage ,$directory)
+    public function __construct(EntityManagerInterface $entityManager, FileManager $fileManager, TokenStorageInterface $storage , $directory)
     {
         $this->entityManager = $entityManager;
         $this->fileManager = $fileManager;
         $this->imageDirectory = $directory;
         $this->storage = $storage;
+    }
+
+    public function birdUploadImage(Bird $bird, UploadedFile $file){
+        $fileName = $this->fileManager->upload($file, $this->imageDirectory);
+        $bird->setImage($fileName);
+        $this->entityManager->flush();
+    }
+
+    public function birdDeleteImage(Bird $bird){
+        $this->fileManager->delete($this->imageDirectory.'/'.$bird->getImage());
+        $bird->setImage(null); //souci avec cette ligne TODO
+        $this->entityManager->flush(); // image non supprimée de la bdd mais uniquement dossier img/birds
     }
 
 }

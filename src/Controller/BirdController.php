@@ -9,14 +9,18 @@ namespace App\Controller;
 
 use App\Entity\Bird;
 use App\Entity\Observation;
+use App\Form\BirdImageType;
 use App\Form\BirdListType;
+use App\Form\BirdWithoutImageType;
 use App\Repository\BirdRepository;
+use App\Service\BirdsManager;
 use App\Service\BreadcrumbManager;
 use App\Service\PaginationManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 
 class BirdController extends Controller
 {
@@ -84,9 +88,9 @@ class BirdController extends Controller
     }
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/espece/{id}", name="oiseau")
+     * @Route("/espece/{id}", name="oiseau", requirements={"id_article"="\d+"})
      */
-    public function birdAction($id){
+    public function birdAction(Request $request, AuthorizationCheckerInterface $checker, BirdsManager $birdManager, $id){
         //Requete BDD
         $bird = $this->getDoctrine()
             ->getRepository(Bird::class)
@@ -95,11 +99,49 @@ class BirdController extends Controller
             ->getRepository(Observation::class)
             ->findObservationsByBirdId($id, self::BEGIN_DISPLAY_OBSERVATION , self::NBR_OBSERVATIONS_PER_PAGE);
 
-        return $this->render('front/specie.html.twig', [
-            'bird' => $bird,
-            'observations' => $observations,
-        ]);
+
+        if (true === $checker->isGranted(['ROLE_ADMIN'])) {
+            if ($bird->getImage() === "" || $bird->getImage() === null) {
+                $form = $this->createForm(BirdImageType::class, $bird);
+            } else {
+                $form = $this->createForm(BirdWithoutImageType::class, $bird);
+            }
+
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid()) {
+
+
+                if ($bird->getImage() !== null && $form->has('image')) {
+                    $birdManager->birdUploadImage($bird, $form->get('image')->getData());
+                }
+                elseif ($form->getClickedButton()->getName() === 'delete_image') {
+                    $birdManager->birdDeleteImage($bird);  // souci ici TODO
+
+                }
+
+                return $this->render('front/specie.html.twig', [
+                    'bird' => $bird,
+                    'observations' => $observations,
+                    'form' => $form->createView()
+                ]);
+
+            } else {
+                return $this->render('front/specie.html.twig', [
+                    'bird' => $bird,
+                    'observations' => $observations,
+                    'form' => $form->createView()
+                ]);
+            }
+
+        } else {
+            return $this->render('front/specie.html.twig', [
+                'bird' => $bird,
+                'observations' => $observations
+            ]);
+        }
     }
+
     /**
      * functionality for search the name bird with the id in the url for my test AK
      * @param null $id

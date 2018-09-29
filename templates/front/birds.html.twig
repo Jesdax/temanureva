@@ -48,7 +48,7 @@
                     <div class="card-image-species center">
                         <img src="
                                {% if result.0.image %}
-                                    {{ image_birds_directory}}/{{ result.0.image }}
+                                    {{ asset('assets/img/birds/'~result.0.image) }}
                                 {% else %}
                                     {{ asset('assets/img/bg_espece_inconnue_gris_2.jpg') }}
                                 {% endif %}

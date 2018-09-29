@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% form_theme form 'materialize_layout.html.twig' %}
 
 {% block title %} {{ bird.lbName }} {% endblock %}
 
@@ -9,9 +10,24 @@
             <div class="col m5 border-real">
                 <img src="
                     {% if bird.image %}
-                        {{ image_birds_directory}}/{{ bird.image }}" alt="photo-especes" class="responsive-img border-teal">
-                {% else %}
-                    {{ asset('assets/img/bg_espece_inconnue_gris_2.jpg') }}" alt="photo-especes" class="responsive-img border-teal">
+                        {{ asset('assets/img/birds/'~bird.image) }}" alt="photo-especes" class="responsive-img border-teal">
+                    {% else %}
+                        {{ asset('assets/img/bg_espece_inconnue_gris_2.jpg') }}" alt="photo-especes" class="responsive-img border-teal">
+                    {% endif %}
+
+                {% if is_granted('ROLE_ADMIN') %}
+                <div class="row center-align">
+                    {{ form_start(form) }}
+                        {% if form.image is defined %}
+                            {{ form_row(form.image) }}
+                            <button class="btn btn-round margin-bottom-light" type="submit">Enregistrer l'image</button>
+                        {% endif %}
+                        {% if form.delete_image is defined %}
+                            {{ form_row(form.delete_image) }}
+                        {% endif %}
+
+                    {{ form_end(form) }}
+                </div>
                 {% endif %}
             </div>
             <div class="col m7 ">
@@ -57,6 +73,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="row margin-top z-depth-1">
             <div id="mapObser"></div>
         </div>
@@ -67,7 +85,6 @@
                 </div>
             {% endfor %}
         </div>
-
     </div>
 
 

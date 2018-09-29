@@ -10,6 +10,7 @@ parameters:
     image_observation_directory: '/assets/img/observation'
     demand_file_directory: '/assets/files/demand'
     image_profile_directory: '/assets/profile/img'
+    image_birds_directory: '/assets/img/birds'
 
 services:
     # default configuration for services in *this* file
@@ -46,6 +47,9 @@ services:
     App\Service\ObservationManager:
         arguments:
             $directory: '%image_observation_directory%'
+    App\Service\BirdsManager:
+        arguments:
+            $directory: '%image_birds_directory%'
     App\Service\ProfileManager:
         arguments:
             $directory: '%image_profile_directory%'

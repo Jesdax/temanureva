@@ -38,16 +38,6 @@ class ObservationType extends AbstractType
                 ]
             ])
 
-            //test avec EntityType
-           /*->add('bird', EntityType::class, [
-                'label'=>'Nom de l\'espèce ',
-                'class' => Bird::class,
-                'query_builder' => function (BirdRepository $br) {
-                    return $br->createQueryBuilder('b')
-                        ->orderBy('b.vernacularName', 'ASC');
-                },
-                'required'=> false,
-            ])*/
             ->add('observation_date', DateTimeType::class, [
                 'widget' =>'single_text',
             ])
@@ -78,6 +68,10 @@ class ObservationType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Observation::class,
+            'validation_groups' => [
+                'add_observation'
+            ],
         ]);
+
     }
 }
