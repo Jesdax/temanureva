@@ -136,6 +136,13 @@ nav {
     background: rgba(0,0,0,0)
 }
 /*---- Slider ----*/
+
+@media only screen and (max-width: 600px) {
+    .slider h1, .slider h2{
+        font-size: 3rem;
+    }
+}
+
 .slider {
     height: 51.10vh;
 }
