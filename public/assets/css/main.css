@@ -696,6 +696,14 @@ card-title-blog{
     }
 }
 
+.text-xl{
+    font-size: x-large;
+}
+
+.height-50{
+    min-height: 50vh;
+}
+
 .full-height{
     min-height: 93vh;
 }

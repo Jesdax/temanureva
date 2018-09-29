@@ -5,11 +5,5 @@
 {% block body %}
     {{ include('common/header.html.twig', {'title' : 'Demande naturaliste'}) }}
     {{ include('common/breadcrumb.html.twig', {'breadcrumb' : breadcrumb }) }}
-    <div class="container">
-        <div class="row only-one-block">
-            <p class="col s12 center">
-                Votre demande a bien été envoyé et est en cour de vérification
-            </p>
-        </div>
-    </div>
+    {{ include('common/message_center_page.html.twig', {'message' : 'Votre demande a bien été envoyé et est en cour de vérification'}) }}
 {% endblock %}

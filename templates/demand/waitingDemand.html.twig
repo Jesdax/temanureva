@@ -5,25 +5,29 @@
 {% block body %}
     {{ include('common/header.html.twig', {'title' : 'Demande naturaliste'}) }}
     {{ include('common/breadcrumb.html.twig', {'breadcrumb' : breadcrumb }) }}
-    <div class="row container">
-        {% for demand in demands %}
-            <div class="col s12 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{% if demand.user.image is null%}{{ asset('assets/img/profile-placeholder.jpg') }}{% else %}{{ image_profile_directory }}/{{ demand.user.image }}{% endif %}" alt="photo_profil">
-                    </div>
-                    <div class="card-content center">
-                        <div class="card-title">{{ demand.user.lastname|upper }} {{ demand.user.firstname }}</div>
-                        <p>Demande envoyé le {{ demand.submitDate|date("d/m/Y") }}</p>
-                    </div>
-                    <div class="center card-action">
-                        <a href="{{ path('certify-demand', {'id': demand.id}) }}" class="btn btn-round btn-teal">Voir plus</a>
+    {% if demands is empty %}
+        {{ include('common/message_center_page.html.twig', { 'message' : 'Aucune nouvelle demande'}) }}
+    {% else %}
+        <div class="row container">
+            {% for demand in demands %}
+                <div class="col s12 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{% if demand.user.image is null%}{{ asset('assets/img/profile-placeholder.jpg') }}{% else %}{{ image_profile_directory }}/{{ demand.user.image }}{% endif %}" alt="photo_profil">
+                        </div>
+                        <div class="card-content center">
+                            <div class="card-title">{{ demand.user.lastname|upper }} {{ demand.user.firstname }}</div>
+                            <p>Demande envoyé le {{ demand.submitDate|date("d/m/Y") }}</p>
+                        </div>
+                        <div class="center card-action">
+                            <a href="{{ path('certify-demand', {'id': demand.id}) }}" class="btn btn-round btn-teal">Voir plus</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
-    </div>
-    <div class="center-align">
-        {{ include('common/pagination.html.twig', {'paginaion' : pagination}) }}
-    </div>
+            {% endfor %}
+        </div>
+        <div class="center-align">
+            {{ include('common/pagination.html.twig', {'paginaion' : pagination}) }}
+        </div>
+    {% endif %}
 {% endblock %}
