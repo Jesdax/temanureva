@@ -367,12 +367,14 @@ footer a {
 }
 
 .card-blog .card-title{
-    height: 5rem;
+    height: 6rem;
 }
 
-.card-blog{
-    height: 49.5rem;
+.article h1{
+    font-size: 3.5rem !important;
+    font-weight: bold;
 }
+
 
 .card-blog .card-image, .card-wait-obs .card-image{
     height: 20em;
@@ -381,12 +383,15 @@ footer a {
 
 .card-blog .card-action, .card-wait-obs .card-action{
     border-top: none;
+    padding: 0;
+    padding-bottom: 1.5rem;
+    position: unset;
 }
 
 .card-blog .card-bottom{
-    position: absolute;
+    /*position: absolute;*/
     padding-top: 2.5rem;
-    height: 29.5rem;
+    /*height: 29.5rem;*/
     /*bottom: 20px;*/
 }
 
@@ -394,14 +399,6 @@ footer a {
     height: 20em;
     min-width: 100%;
     width: auto !important;
-}
-
-.card-blog .card-title{
-    height: 5rem;
-}
-
-.card-blog{
-    height: 49.5rem;
 }
 
 .card-blog .card-image, .card-wait-obs .card-image{
@@ -418,17 +415,19 @@ footer a {
     overflow: hidden;
 }
 
-.card-blog .card-bottom{
-    position: absolute;
-    padding-top: 2.5rem;
-    height: 29.5rem;
-    /*bottom: 20px;*/
-}
+@media only screen and (max-width: 600px) {
+    .article h1{
+        font-size: x-large !important;
+    }
 
-.card-blog img, .card-wait-obs img{
-    height: 20em;
-    min-width: 100%;
-    width: auto !important;
+    .card-blog .card-title{
+        min-height: 8rem;
+        height: unset;
+    }
+
+    .card-blog .card-excerpt{
+        height: unset;
+    }
 }
 
 .card-wait-obs .card-author{
