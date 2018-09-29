@@ -12,6 +12,9 @@
             </div>
             <div class="row">
                 <h1 class="center lighter">{{ user.username }}</h1>
+                <p class="center lighter">
+                    {{ user.roles[0]|roles|capitalize }}
+                </p>
             </div>
             {% if app.user.id is same as(user.id) %}
                 <div class="row center-align">
@@ -39,7 +42,6 @@
         {% set col_width = 6 %}
     {% endif %}
 
-    <div class="">
     <div class="row margin-t link-teal">
 
         {#---- Présentation ----#}
