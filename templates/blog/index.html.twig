@@ -24,7 +24,7 @@
                     <div class="card-content">
                         <p class="center card-title card-title-blog">{{ article.title }}</p>
                         <p class="center card-author">{{ article.user.lastname }} {{ article.user.firstname }} - {{ article.publishingDate|date("d/m/Y") }}</p>
-                        <p>
+                        <p class="card-excerpt text-justify">
                             {{ article.content|slice(0,250)|striptags|raw }}...
                         </p>
                     </div>

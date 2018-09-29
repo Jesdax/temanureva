@@ -413,6 +413,11 @@ footer a {
     border-top: none;
 }
 
+.card-blog .card-excerpt{
+    height: 7.5rem;
+    overflow: hidden;
+}
+
 .card-blog .card-bottom{
     position: absolute;
     padding-top: 2.5rem;
@@ -469,7 +474,7 @@ card-title-blog{
 }
 
 .card .card-content {
-    padding: 0 !important;
+    /*padding: 0 !important;*/
 }
 
 /*---- pagination ----*/
