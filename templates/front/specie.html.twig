@@ -84,6 +84,11 @@
             {% for observation in observations %}
                 <div class="col s6 m4 l2">
                     <img id="again-mesure" src="{{ image_observation_directory}}/{{ observation.image }}" alt="photo-{{ observation.bird.vernacularName }}" class="border-teal specie-observation">
+                    <div class="hiddendiv">
+                        <div class="latitude">{{ observation.latitude }}</div>
+                        <div class="longitude">{{ observation.longitude }}</div>
+                    </div>
+
                 </div>
             {% endfor %}
         </div>
