@@ -10,9 +10,9 @@
 
     {% endif %}
 
-    {{ include('common/header.html.twig', {'asset' : 'assets/img/bg-blog.jpg', 'alt' : 'header_blog', 'title' : article.title}) }}
+    {{ include('common/header.html.twig', {'asset' : 'assets/img/bg-blog.jpg', 'alt' : 'header_blog', 'title' : 'Blog'}) }}
     {{ include('common/breadcrumb.html.twig', {'breadcrumb' : breadcrumb }) }}
-    <div class="container margin-t">
+    <div class="container article">
         <div class="row">
             <div class="col s12">
                 <div class="center">
@@ -23,6 +23,7 @@
                             {{ image_article_directory }}/{{ article.image }}
                         {% endif %}
                     " alt="article_" class="responsive-img">
+                    <h1 class="padding-bottom">{{ article.title }}</h1>
                 </div>
                 <div>
                     {{ article.content|raw }}

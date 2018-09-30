@@ -7,7 +7,7 @@
     {{ include('common/breadcrumb.html.twig', {'breadcrumb' : breadcrumb }) }}
     <div class="row container margin-t">
         {% for article in articles%}
-        <div class="col s12 l4">
+        <div class="col s12 m6 l4">
             <div class="card card-blog">
                 <div class="card-image">
                     <div class="center">
@@ -24,13 +24,13 @@
                     <div class="card-content">
                         <p class="center card-title card-title-blog">{{ article.title }}</p>
                         <p class="center card-author">{{ article.user.lastname }} {{ article.user.firstname }} - {{ article.publishingDate|date("d/m/Y") }}</p>
-                        <p>
+                        <p class="card-excerpt text-justify">
                             {{ article.content|slice(0,250)|striptags|raw }}...
                         </p>
                     </div>
-                    <div class="center card-action">
-                        <a href="{{ path('blog-article', {'id': article.id}) }}" class="btn btn-round btn-teal">Lire l'article</a>
-                    </div>
+                </div>
+                <div class="center card-action">
+                    <a href="{{ path('blog-article', {'id': article.id}) }}" class="btn btn-round btn-teal">Lire l'article</a>
                 </div>
             </div>
         </div>

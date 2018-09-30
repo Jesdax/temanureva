@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gérer utilisateur{% endblock %}
+{% block body %}
+
+    <div class="center">
+        <h1 class="header-text">Gérer utilisateur</h1>
+    </div>
+    <div class="margin-bottom">
+        {{ include('common/breadcrumb.html.twig', {'breadcrumb' : breadcrumb }) }}
+    </div>
+    <div class="row container">
+        {% for user in users %}
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="">
+                        <img src="{% if user.image is null%}{{ asset('assets/img/profile-placeholder.jpg') }}{% else %}{{ image_profile_directory }}/{{ user.image }}{% endif %}" alt="photo_profil" class="responsive-img">
+                    </div>
+                    <div class="card-content center">
+                        <div class="card-title">{{ user.lastname|upper }} {{ user.firstname }}</div>
+                        <p>Inscrit le {{ user.registrationDate|date("d/m/Y") }}</p>
+                    </div>
+                    <div class="center card-action">
+                        <a href="{{ path('profil', {'id': user.id}) }}" class="btn btn-round btn-teal">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="center-align">
+            {{ include('common/pagination.html.twig', {'paginaion' : pagination}) }}
+        </div>
+    </div>
+{% endblock %}

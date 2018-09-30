@@ -12,6 +12,8 @@ use App\Entity\Article;
 use App\Entity\Observation;
 use App\Entity\User;
 use App\Form\modifyProfileType;
+use App\Service\BreadcrumbManager;
+use App\Service\PaginationManager;
 use App\Service\ProfileManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,6 +22,10 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class ProfileController extends Controller
 {
+    const NBR_USER_MANAGE = 8;
+    const PAGINATION_DISPLAY_MANAGE = 5;
+
+    const NBR_PROFILE_HISTORY = 3;
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
@@ -32,9 +38,9 @@ class ProfileController extends Controller
             return $this->redirectToRoute('profil',['id' => $this->getUser()->getId()]);
         }
         $user = $this->getDoctrine()->getRepository(User::class)->findById($id);
-        $observations = $this->getDoctrine()->getRepository(Observation::class)->findByObserver($user->getId(),0, 3);
-        $validations = $this->getDoctrine()->getRepository(Observation::class)->findByValidator($user->getId(),0, 3);
-        $articles = $this->getDoctrine()->getRepository(Article::class)->findByAuthor($user->getId(),0, 3);
+        $observations = $this->getDoctrine()->getRepository(Observation::class)->findByObserver($user->getId(),0, self::NBR_PROFILE_HISTORY);
+        $validations = $this->getDoctrine()->getRepository(Observation::class)->findByValidator($user->getId(),0, self::NBR_PROFILE_HISTORY);
+        $articles = $this->getDoctrine()->getRepository(Article::class)->findByAuthor($user->getId(),0, self::NBR_PROFILE_HISTORY);
 
         return $this->render('back/index.html.twig', [
             'user' => $user,
@@ -75,6 +81,29 @@ class ProfileController extends Controller
         return $this->render('back/modify_profile.html.twig',[
             'user' =>$user,
             'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/profil/gerer-utilisateur/{page}", name="manage-user", requirements={"page"="\d+$"})
+     */
+    public function manageUser($page =1){
+        //Insert breadcrumb
+        $breadcrumb = new BreadcrumbManager();
+        $breadcrumb
+            ->add('profil', 'Mon profil')
+            ->add('manage-user', 'Gérer utilisateur');
+
+        $users = $this->getDoctrine()->getRepository(User::class)->findWithOffset(($page-1)*self::NBR_USER_MANAGE,self::NBR_USER_MANAGE);
+        $nbrUser = $this->getDoctrine()->getRepository(User::class)->getNumberUser();
+
+        //Pagination
+        $pagination =  new PaginationManager($page, $nbrUser,self::NBR_USER_MANAGE,self::PAGINATION_DISPLAY_MANAGE, 'manage-user');
+
+        return $this->render('back/manage_user.html.twig', [
+            'breadcrumb' => $breadcrumb->getBreadcrumb(),
+            'users' => $users,
+            'pagination' => $pagination
         ]);
     }
 }

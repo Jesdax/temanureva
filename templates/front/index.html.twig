@@ -11,10 +11,11 @@
                         <div class="caption center-align margin-bottom-slide">
                             <h1 class="lighter">Nos Amis les Oiseaux</h1>
                             <div class="center-align margin-bottom-slide">
-                                <a href="{{ path('user_registration') }}"><button class="btn btn-round btn-brown">Inscrivez-vous</button></a>
                                 {% if is_granted(['ROLE_PARTICULAR', 'ROLE_NATURALIST', 'ROLE_EDITOR', 'ROLE_ADMIN'])  %}
+                                    <a href="{{ path('ajout_observation') }}"><button class="btn btn-round btn-brown">Ajouter observation</button></a>
                                     <a href="{{ path('profil', {'id': app.user.id}) }}"><button class="btn btn-round btn-brown">Mon profil</button></a>
                                 {% else %}
+                                    <a href="{{ path('user_registration') }}"><button class="btn btn-round btn-brown">Inscrivez-vous</button></a>
                                     <a href="{{ path('explorer') }}"><button class="btn btn-round btn-brown">Découvrir</button></a>
                                 {% endif %}
 
@@ -34,11 +35,9 @@
                                 {{ form_start(formNews) }}
                                 <div class="col s12 l7">
                                     {{ form_row(formNews.email) }}
-                                    {#<input type="email" placeholder="Inscrivez-vous à la Newsletter">#}
                                 </div>
                                 <div class="col S12 l5">
                                     {{ form_row(formNews.submit, { 'attr' : { 'class' : 'btn-round btn-brown'}}) }}
-                                    {#<button class="btn btn-round btn-brown">S'inscrire</button>#}
                                 </div>
                                 {{ form_end(formNews) }}
                             </div>

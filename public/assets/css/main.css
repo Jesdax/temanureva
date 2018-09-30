@@ -136,6 +136,13 @@ nav {
     background: rgba(0,0,0,0)
 }
 /*---- Slider ----*/
+
+@media only screen and (max-width: 600px) {
+    .slider h1, .slider h2{
+        font-size: 3rem;
+    }
+}
+
 .slider {
     height: 51.10vh;
 }
@@ -360,11 +367,38 @@ footer a {
 }
 
 .card-blog .card-title{
-    height: 5rem;
+    height: 6rem;
 }
 
-.card-blog{
-    height: 49.5rem;
+.article h1{
+    font-size: 3.5rem !important;
+    font-weight: bold;
+}
+
+
+.card-blog .card-image, .card-wait-obs .card-image{
+    height: 20em;
+    overflow: hidden;
+}
+
+.card-blog .card-action, .card-wait-obs .card-action{
+    border-top: none;
+    padding: 0;
+    padding-bottom: 1.5rem;
+    position: unset;
+}
+
+.card-blog .card-bottom{
+    /*position: absolute;*/
+    padding-top: 2.5rem;
+    /*height: 29.5rem;*/
+    /*bottom: 20px;*/
+}
+
+.card-blog img, .card-wait-obs img{
+    height: 20em;
+    min-width: 100%;
+    width: auto !important;
 }
 
 .card-blog .card-image, .card-wait-obs .card-image{
@@ -376,47 +410,24 @@ footer a {
     border-top: none;
 }
 
-.card-blog .card-bottom{
-    position: absolute;
-    padding-top: 2.5rem;
-    height: 29.5rem;
-    /*bottom: 20px;*/
-}
-
-.card-blog img, .card-wait-obs img{
-    height: 20em;
-    min-width: 100%;
-    width: auto !important;
-}
-
-.card-blog .card-title{
-    height: 5rem;
-}
-
-.card-blog{
-    height: 49.5rem;
-}
-
-.card-blog .card-image, .card-wait-obs .card-image{
-    height: 20em;
+.card-blog .card-excerpt{
+    height: 7.5rem;
     overflow: hidden;
 }
 
-.card-blog .card-action, .card-wait-obs .card-action{
-    border-top: none;
-}
+@media only screen and (max-width: 600px) {
+    .article h1{
+        font-size: x-large !important;
+    }
 
-.card-blog .card-bottom{
-    position: absolute;
-    padding-top: 2.5rem;
-    height: 29.5rem;
-    /*bottom: 20px;*/
-}
+    .card-blog .card-title{
+        min-height: 8rem;
+        height: unset;
+    }
 
-.card-blog img, .card-wait-obs img{
-    height: 20em;
-    min-width: 100%;
-    width: auto !important;
+    .card-blog .card-excerpt{
+        height: unset;
+    }
 }
 
 .card-wait-obs .card-author{
@@ -457,8 +468,12 @@ card-title-blog{
     padding-top: 18px !important;
 }
 
+.card-profile i{
+    display: unset;
+}
+
 .card .card-content {
-    padding: 0 !important;
+    /*padding: 0 !important;*/
 }
 
 /*---- pagination ----*/
@@ -690,6 +705,14 @@ card-title-blog{
         width: unset;
         max-width: 85.375rem;
     }
+}
+
+.text-xl{
+    font-size: x-large;
+}
+
+.height-50{
+    min-height: 50vh;
 }
 
 .full-height{

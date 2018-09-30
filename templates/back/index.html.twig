@@ -12,6 +12,9 @@
             </div>
             <div class="row">
                 <h1 class="center lighter">{{ user.username }}</h1>
+                <p class="center lighter">
+                    {{ user.roles[0]|roles|capitalize }}
+                </p>
             </div>
             {% if app.user.id is same as(user.id) %}
                 <div class="row center-align">
@@ -20,7 +23,7 @@
                         <a href="{{ path('mes_observations') }}" class="btn btn-round btn-brown">Mes observations</a>
                     {% endif %}
                     {% if is_granted('ROLE_ADMIN') %}
-                        <a href="{{ path('waiting-observation') }}" class="btn btn-round btn-brown">Observation(s) en attente</a>
+                        <a href="{{ path('waiting-observation') }}" class="btn btn-round btn-brown">Observation en attente</a>
                     {% endif %}
                     {% if is_granted('ROLE_EDITOR') or is_granted('ROLE_ADMIN') %}
                         <a href="{{ path('gerer-articles') }}" class="btn btn-round btn-brown">Gérer les articles</a>
@@ -39,7 +42,6 @@
         {% set col_width = 6 %}
     {% endif %}
 
-    <div class="">
     <div class="row margin-t link-teal">
 
         {#---- Présentation ----#}
@@ -61,7 +63,7 @@
         </div>
 
         {#---- Dernières activités ----#}
-        {% if is_granted('ROLE_PARTICULAR') or is_granted('ROLE_NATURALIST') or is_granted('ROLE_ADMIN') %}
+        {% if (app.user.id is same as(user.id) and is_granted(['ROLE_PARTICULAR', 'ROLE_NATURALIST', 'ROLE_ADMIN'])) or user.roles[0] != 'ROLE_EDITOR'%}
         <div class="col s12 l{{ col_width }}">
             <div class="card-panel card-profile">
                 <div class="card-title valign-wrapper">
@@ -79,12 +81,12 @@
                                 {% else %}
                                     {{ observation.bird.vernacularName }}
                                 {% endif %}
-                            </a><em> (
+                            </a><i> (
                             {% if observation.bird == null %}
                                 -
                             {% else %}
                                 {{ observation.bird.lbName }}
-                            {% endif %})</em>
+                            {% endif %})</i>
                         </div>
                     {% endfor %}
                 </div>
@@ -92,7 +94,7 @@
         </div>
         {% endif %}
         {#---- Validation ----#}
-        {% if is_granted('ROLE_NATURALIST') or is_granted('ROLE_ADMIN') %}
+        {% if app.user.id is same as(user.id) and is_granted(['ROLE_NATURALIST','ROLE_ADMIN']) %}
         <div class="col s12 l{{ col_width }}">
             <div class="card-panel card-profile">
                 <div class="card-title valign-wrapper">
@@ -113,7 +115,7 @@
         {% endif %}
 
         {#---- Article ----#}
-        {% if is_granted('ROLE_EDITOR') or is_granted('ROLE_ADMIN') %}
+        {% if (app.user.id is same as(user.id) and is_granted(['ROLE_ADMIN', 'ROLE_EDITOR'])) or user.roles[0] == 'ROLE_EDITOR'  %}
         <div class="col s12 l{{ col_width }}">
             <div class="card-panel card-profile">
                 <div class="card-title valign-wrapper">
@@ -146,7 +148,7 @@
                 <a href="{{ path('waiting-observation') }}" class="btn btn-round btn-brown">Observation(s) en attente</a>
             {% endif %}
             {% if is_granted('ROLE_ADMIN') %}
-                <a href="#" class="btn btn-round btn-brown">Gérer Utilisateur </a>
+                <a href="{{ path('manage-user') }}" class="btn btn-round btn-brown">Gérer Utilisateur </a>
                 <a href="{{ path('waiting-demand') }}" class="btn btn-round btn-brown">Certifier un naturaliste</a>
             {% endif %}
             <a href="{{ path('security_logout') }}" class="btn btn-round btn-brown">Déconnexion</a>
