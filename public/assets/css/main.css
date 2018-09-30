@@ -648,6 +648,7 @@ card-title-blog{
 }
 
 #mapObser {
+    z-index: 200;
     height: 350px;
 }
 
