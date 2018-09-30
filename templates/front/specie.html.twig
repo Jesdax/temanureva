@@ -1,21 +1,21 @@
 {% extends 'base.html.twig' %}
-{% form_theme form 'materialize_layout.html.twig' %}
 
 {% block title %} {{ bird.lbName }} {% endblock %}
 
 {% block body %}
 
-    <div class="container">
+    <div class="container margin-t specie">
         <div class="row">
-            <div class="col m5 border-real">
+            <div class="col pull m5 border-real">
                 <img src="
                     {% if bird.image %}
-                        {{ asset('assets/img/birds/'~bird.image) }}" alt="photo-especes" class="responsive-img border-teal">
+                        {{ asset('assets/img/birds/'~bird.image) }}
                     {% else %}
-                        {{ asset('assets/img/bg_espece_inconnue_gris_2.jpg') }}" alt="photo-especes" class="responsive-img border-teal">
+                        {{ asset('assets/img/bg_espece_inconnue_gris_2.jpg') }}
                     {% endif %}
-
+                " alt="photo-especes" class="specie-observation border-teal">
                 {% if is_granted('ROLE_ADMIN') %}
+                    {% form_theme form 'materialize_layout.html.twig' %}
                 <div class="row center-align">
                     {{ form_start(form) }}
                         {% if form.image is defined %}
@@ -40,12 +40,10 @@
                             <li class="tab col m4"><a href="#a-propos">&Agrave; propos</a></li>
                             <li class="tab col m4"><a href="#identity">Fiche d'identité</a></li>
                         </ul>
-                        <div class="row" id="last-observations">
-                            <ul>
+                        <div class="row padding-15" id="last-observations">
                                 {% for observation in observations %}
-                                    <ul class="col mini-margin">- Observé le {{ observation.observationDate|date("d/m/Y") }}</ul>
+                                    <p class="col s4 mini-margin">- Observé le {{ observation.observationDate|date("d/m/Y") }}</p>
                                 {% endfor %}
-                            </ul>
                         </div>
                         <div class="row" id="a-propos">
                             <div class="col s12 m6 center">
@@ -57,20 +55,25 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row" id="identity">
-                            <div class="col mini-margin"><i class="material-icons">subdirectory_arrow_right</i>Ordre : {{ bird.nameOrder }}</div>
-                            <br>
-                            <div class="col mini-margin"><i class="material-icons">subdirectory_arrow_right</i>Famille : {{ bird.family }}</div>
-                            <br>
-                            <div class="col mini-margin"><i class="material-icons">subdirectory_arrow_right</i>
-                                {% if bird.rank == 'ES' %}
-                                    Espèce : {{ bird.lbName }}
-                                {% else %}
-                                    Sous-espèce : {{ bird.lbName }}
-                                {% endif %}
+                        <div class="row padding-15" id="identity">
+                            <div class="col">
+                                <span class="mini-margin">{#<i class="material-icons">subdirectory_arrow_right</i>#}Ordre : {{ bird.nameOrder }}</span>
+                                <br>&emsp;
+                                <span class="mini-margin"><i class="material-icons">subdirectory_arrow_right</i>Famille : {{ bird.family }}</span>
+                                <br>&emsp;&emsp;
+                                <span class="mini-margin"><i class="material-icons">subdirectory_arrow_right</i>
+                                    {% if bird.rank == 'ES' %}
+                                        Espèce : {{ bird.lbName }}
+                                    {% else %}
+                                        Sous-espèce : {{ bird.lbName }}
+                                    {% endif %}
+                            </span>
                             </div>
                         </div>
                 </div>
+                {#<div class="row margin-top z-depth-1">#}
+                    {#<div id="mapObser"></div>#}
+                {#</div>#}
             </div>
         </div>
 
@@ -78,12 +81,18 @@
         <div class="row margin-top z-depth-1">
             <div id="mapObser"></div>
         </div>
-        <div class="row margin-top center">
+        <div id="species_bottom" class="row margin-top margin-bottom center">
             {% for observation in observations %}
                 <div class="col s6 m4 l2">
                     <img id="again-mesure" src="{{ image_observation_directory}}/{{ observation.image }}" alt="photo-{{ observation.bird.vernacularName }}" class="border-teal specie-observation">
                 </div>
             {% endfor %}
+            {% for i in 0..7  %}
+                <div class="col s6 m4 l2">
+                    <img id="again-mesure" src="/assets/img/observation/moineau.jpeg" alt="photo-Moineau domestique (indicus)" class="border-teal specie-observation">
+                </div>
+            {% endfor %}
+
         </div>
     </div>
 
