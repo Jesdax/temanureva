@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
+{% if is_granted('ROLE_ADMIN') %}
 {% form_theme form 'materialize_layout.html.twig' %}
+{% endif %}
 
 {% block title %} {{ bird.lbName }} {% endblock %}
 
