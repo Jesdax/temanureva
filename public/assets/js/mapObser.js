@@ -9,7 +9,10 @@ latLength = lat.length;
 lngLength = lng.length;
 
 for (var i = 0; i < latLength && i < lngLength; i++ ) {
-    L.marker([lat[i].innerHTML, lng[i].innerHTML]).addTo(map);
+    L.circle([lat[i].innerHTML, lng[i].innerHTML], {
+        radius: 100000,
+        color: 'grey',
+    }).addTo(map);
 }
 
 
