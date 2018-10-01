@@ -24,6 +24,15 @@ a {
     margin-bottom: 2.5rem;
 }
 
+.margin-unset{
+    margin: unset !important;
+}
+
+.margin-negative{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
 .big-header h1 {
     color: #FFFFFF;
     margin: auto;
@@ -583,7 +592,8 @@ card-title-blog{
     height: 140px !important;
 }
 
-#height-species-tabs .tabs{
+#height-species-tabs .tabs,
+#species_collapsible .collapsible-header{
     background-color: #707070;
 }
 
@@ -595,12 +605,20 @@ card-title-blog{
     text-transform: none;
 }
 
-#height-species-tabs .tabs .tab a{
+#height-species-tabs .tabs .tab a,
+#species_collapsible .collapsible-header{
     color: white;
 }
 
-#height-species-tabs .tabs .tab a:focus, #height-species-tabs .tabs .tab a:focus.active, #height-species-tabs .tabs .tab .active{
+#height-species-tabs .tabs .tab a:focus,
+#height-species-tabs .tabs .tab a:focus.active,
+#height-species-tabs .tabs .tab .active,
+#species_collapsible li[class=active] .collapsible-header{
     background-color: #01796F;
+}
+
+#species_collapsible{
+    padding: 0;
 }
 
 .no-mad-bot {
