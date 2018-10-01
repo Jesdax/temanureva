@@ -492,17 +492,6 @@ card-title-blog{
     height: 19.6875rem;
 }
 
-@media only screen and (max-width: 600px){
-    .header-w-img img{
-        height: 19.68rem;
-        min-width: 100%;
-    }
-    .header{
-        border-bottom: 1px black solid;
-    }
-}
-
-
 .header-img{
     position: absolute;
     z-index: -1;
@@ -511,6 +500,22 @@ card-title-blog{
 
 .header-text{
     margin: 2.5rem 0;
+}
+
+@media only screen and (max-width: 600px){
+    .header-w-img img{
+        height: unset;
+    }
+
+    .header-w-img{
+        height: unset;
+    }
+    .header{
+        border-bottom: 1px black solid;
+    }
+    .header-text{
+        margin: unset;
+    }
 }
 
 /*---- breadcrumb ----*/
