@@ -1,11 +1,21 @@
-var marker;
-
-
+var lat = document.getElementsByClassName('latitude');
+var lng = document.getElementsByClassName('longitude');
 var map = L.map('mapObser', {
     center: [46.70973594407157, 2.6367187500000004],
-    zoom: 6,
-    zoomControl: false
+    zoom: 5,
+    scrollWheelZoom: false
 });
+latLength = lat.length;
+lngLength = lng.length;
+
+for (var i = 0; i < latLength && i < lngLength; i++ ) {
+    L.circle([lat[i].innerHTML, lng[i].innerHTML], {
+        radius: 100000,
+        color: 'grey',
+    }).addTo(map);
+}
+
+
 
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {

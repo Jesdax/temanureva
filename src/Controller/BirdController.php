@@ -16,6 +16,7 @@ use App\Repository\BirdRepository;
 use App\Service\BirdsManager;
 use App\Service\BreadcrumbManager;
 use App\Service\PaginationManager;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -98,6 +99,7 @@ class BirdController extends Controller
         $observations = $this->getDoctrine()
             ->getRepository(Observation::class)
             ->findObservationsByBirdId($id, self::BEGIN_DISPLAY_OBSERVATION , self::NBR_OBSERVATIONS_PER_PAGE);
+
 
 
         if (true === $checker->isGranted(['ROLE_ADMIN'])) {

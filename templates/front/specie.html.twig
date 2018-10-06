@@ -1,4 +1,7 @@
 {% extends 'base.html.twig' %}
+{% if is_granted('ROLE_ADMIN') %}
+{% form_theme form 'materialize_layout.html.twig' %}
+{% endif %}
 
 {% block title %} {{ bird.lbName }} {% endblock %}
 
@@ -17,7 +20,6 @@
                     {% endif %}
                 " alt="photo-especes" class="specie-observation border-teal">
                 {% if is_granted('ROLE_ADMIN') %}
-                    {% form_theme form 'materialize_layout.html.twig' %}
                     <div class="row center-align">
                         {{ form_start(form) }}
                         {% if form.image is defined %}
@@ -137,14 +139,13 @@
             {% for observation in observations %}
                 <div class="col s6 m4 l2">
                     <img id="again-mesure" src="{{ image_observation_directory}}/{{ observation.image }}" alt="photo-{{ observation.bird.vernacularName }}" class="border-teal specie-observation">
-                </div>
-            {% endfor %}
-            {% for i in 0..5  %}
-                <div class="col s6 m4 l2">
-                    <img id="again-mesure" src="/assets/img/observation/moineau.jpeg" alt="photo-Moineau domestique (indicus)" class="border-teal specie-observation">
-                </div>
-            {% endfor %}
+                    <div class="hiddendiv">
+                        <div class="latitude">{{ observation.latitude }}</div>
+                        <div class="longitude">{{ observation.longitude }}</div>
+                    </div>
 
+                </div>
+            {% endfor %}
         </div>
     </div>
 

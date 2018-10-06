@@ -691,7 +691,8 @@ card-title-blog{
 }
 
 #mapObser {
-    height: 300px;
+    z-index: 200;
+    height: 350px;
 }
 
 /*#observation-map {
