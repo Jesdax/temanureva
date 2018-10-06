@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8d5349a-c30f-4cf0-bd5d-42c338c63437" name="Default Changelist" comment="Some change on spiece page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/bg_espece_inconnue_gris_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/bg_espece_inconnue_gris_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/specie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/specie.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="f8d5349a-c30f-4cf0-bd5d-42c338c63437" name="Default Changelist" comment="Some design change in species" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
     <ignored path="$PROJECT_DIR$/vendor/doctrine/cache/" />
@@ -182,7 +177,7 @@
       <file leaf-file-name="specie.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/front/specie.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
+            <state relative-caret-position="387">
               <caret line="126" column="21" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
@@ -553,7 +548,7 @@
       <workItem from="1538031448748" duration="26120000" />
       <workItem from="1538120473051" duration="15912000" />
       <workItem from="1538238358633" duration="13573000" />
-      <workItem from="1538409966991" duration="9590000" />
+      <workItem from="1538409966991" duration="10554000" />
     </task>
     <task id="LOCAL-00001" summary="Merge conflit">
       <created>1538217012524</created>
@@ -625,11 +620,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538413451650</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Some design change in species">
+      <created>1538424295765</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1538424295765</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66906000" />
+    <option name="totallyTimeSpent" value="67870000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -649,10 +651,10 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50030655" side_tool="true" weight="0.33291298" />
       <window_info anchor="right" id="Database" order="3" weight="0.22518677" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3293348" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3293348" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293348" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49969345" weight="0.3838604" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49969345" visible="true" weight="0.3838604" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -707,7 +709,8 @@
     <MESSAGE value="Correction of view on the other users profiles page" />
     <MESSAGE value="Some change on spiece page" />
     <MESSAGE value="Correction of the header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction of the header" />
+    <MESSAGE value="Some design change in species" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some design change in species" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1078,7 +1081,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/specie.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
+        <state relative-caret-position="387">
           <caret line="126" column="21" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
