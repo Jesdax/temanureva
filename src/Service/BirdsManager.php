@@ -37,8 +37,8 @@ class BirdsManager
 
     public function birdDeleteImage(Bird $bird){
         $this->fileManager->delete($this->imageDirectory.'/'.$bird->getImage());
-        $bird->setImage(null); //souci avec cette ligne TODO
-        $this->entityManager->flush(); // image non supprimée de la bdd mais uniquement dossier img/birds
+        $bird->setImage(null);
+        $this->entityManager->flush();
     }
 
 }
