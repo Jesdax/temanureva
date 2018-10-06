@@ -53,10 +53,19 @@
                     {{ form_end(form) }}
                 {% endif %}
             </div>
+
         </div>
+        <div class="row margin-bottom">
+            <div id="mapMyObs"></div>
+        </div>
+    </div>
+    <div class="hiddendiv">
+        <div class="latitude">{{ observation.latitude }}</div>
+        <div class="longitude">{{ observation.longitude }}</div>
     </div>
 {% endblock %}
 
 {% block autocomplete %}
     <script src="{{ asset('build/app.js') }}"></script>
 {% endblock %}
+

@@ -652,6 +652,11 @@ card-title-blog{
     height: 350px;
 }
 
+#mapMyObs {
+    z-index: 200;
+    height: 350px;
+}
+
 /*#observation-map {
     position: absolute;
     top: 5rem;
