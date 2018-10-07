@@ -47,7 +47,7 @@
                             <li class="tab col m4"><a href="#identity">Fiche d'identité</a></li>
                         </ul>
                         <div class="row padding-15" id="last-observations">
-                                {% for observation in observations %}
+                                {% for observation in observations|slice(0,9) %}
                                     <p class="col s4 mini-margin">- Observé le {{ observation.observationDate|date("d/m/Y") }}</p>
                                 {% endfor %}
                         </div>
@@ -89,7 +89,7 @@
                         <div class="collapsible-header">Dernières observations</div>
                         <div class="collapsible-body">
                             <div class="row padding-15">
-                                {% for observation in observations %}
+                                {% for observation in observations|slice(0,9) %}
                                     <p class="col s12">- Observé le {{ observation.observationDate|date("d/m/Y") }}</p>
                                 {% endfor %}
                             </div>
@@ -136,7 +136,7 @@
             <div id="mapObser"></div>
         </div>
         <div id="species_bottom" class="row margin-top margin-bottom center">
-            {% for observation in observations %}
+            {% for observation in observations|slice(0,12) %}
                 <div class="col s6 m4 l2">
                     <img id="again-mesure" src="{{ image_observation_directory}}/{{ observation.image }}" alt="photo-{{ observation.bird.vernacularName }}" class="border-teal specie-observation">
                     <div class="hiddendiv">

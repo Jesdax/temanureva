@@ -37,8 +37,20 @@ class ObservationManager
 
     public function valide(Observation $observation){
         $observation
+            ->setStatus(true)
             ->setValidationDate(new \DateTime())
             ->setValidator($this->storage->getToken()->getUser());
-//        $this->entityManager->flush();
+        $this->entityManager->flush();
+    }
+
+    public function delete(Observation $observation){
+        $this->deleteImage($observation);
+        $this->entityManager->remove($observation);
+        $this->entityManager->flush();
+    }
+
+    public function deleteImage(Observation $observation){
+        $this->fileManager->delete($this->imageDirectory.'/'.$observation->getImage());
+        $observation->setImage(null);
     }
 }

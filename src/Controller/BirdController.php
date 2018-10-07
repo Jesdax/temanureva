@@ -118,15 +118,10 @@ class BirdController extends Controller
                     $birdManager->birdUploadImage($bird, $form->get('image')->getData());
                 }
                 elseif ($form->getClickedButton()->getName() === 'delete_image') {
-                    $birdManager->birdDeleteImage($bird);  // souci ici TODO
-
+                    $birdManager->birdDeleteImage($bird);
                 }
 
-                return $this->render('front/specie.html.twig', [
-                    'bird' => $bird,
-                    'observations' => $observations,
-                    'form' => $form->createView()
-                ]);
+                return $this->redirectToRoute('oiseau', ['id' => $id]);
 
             } else {
                 return $this->render('front/specie.html.twig', [
