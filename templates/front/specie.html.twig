@@ -7,19 +7,21 @@
 
 {% block body %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col m5 border-real">
+    <div class="container margin-t specie">
+        <div class="row margin-negative">
+
+            {#---- Image  espèce----#}
+            <div class="col s12 m5 border-real">
                 <img src="
                     {% if bird.image %}
-                        {{ asset('assets/img/birds/'~bird.image) }}" alt="photo-especes" class="responsive-img border-teal">
+                        {{ asset('assets/img/birds/'~bird.image) }}
                     {% else %}
-                        {{ asset('assets/img/bg_espece_inconnue_gris_2.jpg') }}" alt="photo-especes" class="responsive-img border-teal">
+                        {{ asset('assets/img/bg_espece_inconnue_gris_2.jpg') }}
                     {% endif %}
-
+                " alt="photo-especes" class="specie-observation border-teal">
                 {% if is_granted('ROLE_ADMIN') %}
-                <div class="row center-align">
-                    {{ form_start(form) }}
+                    <div class="row center-align">
+                        {{ form_start(form) }}
                         {% if form.image is defined %}
                             {{ form_row(form.image) }}
                             <button class="btn btn-round margin-bottom-light" type="submit">Enregistrer l'image</button>
@@ -28,26 +30,26 @@
                             {{ form_row(form.delete_image) }}
                         {% endif %}
 
-                    {{ form_end(form) }}
-                </div>
+                        {{ form_end(form) }}
+                    </div>
                 {% endif %}
             </div>
-            <div class="col m7 ">
-                <div class="row">
-                    <h1 class="little-h1">{{ bird.vernacularName }}</h1>
+
+            {# ---- Tab ---- #}
+            <div class="col s12 m7 padding-15">
+                <div class="row margin-unset">
+                    <h1 class="col s12 center little-h1">{{ bird.vernacularName }}</h1>
                 </div>
-                <div class="row z-depth-2" id="height-species-tabs">
+                <div class="row margin-unset z-depth-2 hide-on-small-and-down" id="height-species-tabs">
                         <ul class="tabs z-depth-1">
                             <li class="tab tabs-fixed-width col m4"><a href="#last-observations">Dernières observations</a></li>
                             <li class="tab col m4"><a href="#a-propos">&Agrave; propos</a></li>
                             <li class="tab col m4"><a href="#identity">Fiche d'identité</a></li>
                         </ul>
-                        <div class="row" id="last-observations">
-                            <ul>
-                                {% for observation in observations %}
-                                    <ul class="col mini-margin">- Observé le {{ observation.observationDate|date("d/m/Y") }}</ul>
+                        <div class="row padding-15" id="last-observations">
+                                {% for observation in observations|slice(0,9) %}
+                                    <p class="col s4 mini-margin">- Observé le {{ observation.observationDate|date("d/m/Y") }}</p>
                                 {% endfor %}
-                            </ul>
                         </div>
                         <div class="row" id="a-propos">
                             <div class="col s12 m6 center">
@@ -59,31 +61,81 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row" id="identity">
-                            <div class="col mini-margin"><i class="material-icons">subdirectory_arrow_right</i>Ordre : {{ bird.nameOrder }}</div>
-                            <br>
-                            <div class="col mini-margin"><i class="material-icons">subdirectory_arrow_right</i>Famille : {{ bird.family }}</div>
-                            <br>
-                            <div class="col mini-margin"><i class="material-icons">subdirectory_arrow_right</i>
+                        <div class="row padding-15" id="identity">
+                            <div class="col">
+                                <span class="mini-margin">{#<i class="material-icons">subdirectory_arrow_right</i>#}Ordre : {{ bird.nameOrder }}</span>
+                                <br>&emsp;
+                                <span class="mini-margin"><i class="material-icons">subdirectory_arrow_right</i>Famille : {{ bird.family }}</span>
+                                <br>&emsp;&emsp;
+                                <span class="mini-margin"><i class="material-icons">subdirectory_arrow_right</i>
+                                    {% if bird.rank == 'ES' %}
+                                        Espèce : {{ bird.lbName }}
+                                    {% else %}
+                                        Sous-espèce : {{ bird.lbName }}
+                                    {% endif %}
+                                </span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            {# ---- collapsible ---- #}
+            <div class="col s12 padding-15">
+                <ul class="collapsible hide-on-med-and-up" id="species_collapsible">
+                    <li class="active">
+                        <div class="collapsible-header">Dernières observations</div>
+                        <div class="collapsible-body">
+                            <div class="row padding-15">
+                                {% for observation in observations|slice(0,9) %}
+                                    <p class="col s12">- Observé le {{ observation.observationDate|date("d/m/Y") }}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">À propos</div>
+                        <div class="collapsible-body">
+                            <div class="row">
+                                <div class="col s12 m6 center">
+                                    <img id="height-species-img" class="responsive-img" src="{{ asset('assets/img/Logo_inpn.jpg') }}">
+                                </div>
+                                <div class="col s12 m6 margin-top center">
+                                    <a href="https://inpn.mnhn.fr/espece/cd_nom/{{ bird.cdName }}" target="_blank">
+                                        <button class="btn btn-brown btn-round">Voir plus sur INPN</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Fiche d'identité</div>
+                        <div class="collapsible-body">
+                            <span class="mini-margin">{#<i class="material-icons">subdirectory_arrow_right</i>#}Ordre : {{ bird.nameOrder }}</span>
+                            <br>&emsp;
+                            <span class="mini-margin"><i class="material-icons">subdirectory_arrow_right</i>Famille : {{ bird.family }}</span>
+                            <br>&emsp;&emsp;
+                            <span class="mini-margin"><i class="material-icons">subdirectory_arrow_right</i>
                                 {% if bird.rank == 'ES' %}
                                     Espèce : {{ bird.lbName }}
                                 {% else %}
                                     Sous-espèce : {{ bird.lbName }}
                                 {% endif %}
-                            </div>
+                        </span>
                         </div>
-                </div>
+                    </li>
+                </ul>
             </div>
+
         </div>
 
 
         <div class="row margin-top z-depth-1">
             <div id="mapObser"></div>
         </div>
-        <div class="row margin-top center">
-            {% for observation in observations %}
+        <div id="species_bottom" class="row margin-top margin-bottom center">
+            {% for observation in observations|slice(0,12) %}
                 <div class="col s6 m4 l2">
-                    <img id="again-mesure" src="{{ image_observation_directory}}/{{ observation.image }}" alt="photo-{{ observation.bird.vernacularName }}" class="border-teal specie-observation">
+                    <img id="species_img_observation" src="{{ image_observation_directory}}/{{ observation.image }}" alt="photo-{{ observation.bird.vernacularName }}" class="border-teal">
                     <div class="hiddendiv">
                         <div class="latitude">{{ observation.latitude }}</div>
                         <div class="longitude">{{ observation.longitude }}</div>

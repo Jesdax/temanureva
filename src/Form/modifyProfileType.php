@@ -36,7 +36,7 @@ class modifyProfileType extends AbstractType
                 'first_options' => ['label' => 'Nouveau mot de passe'],
                 'second_options' => ['label' => 'Confirmer mot de passe'],
             ])
-//            ->add('password', PasswordType::class, ['label' => 'Mot de passe actuel'])
+            ->add('password', PasswordType::class, ['label' => 'Mot de passe actuel'])
             ->add('date_of_birth', DateType::class, [
                 'label' => 'Date de naissance',
                 'attr' => ['class' => 'datepicker'],
