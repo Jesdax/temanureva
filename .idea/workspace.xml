@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49f52b2c-0cab-489b-b2c2-eb455087eee1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="49f52b2c-0cab-489b-b2c2-eb455087eee1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
     <ignored path="$PROJECT_DIR$/vendor/doctrine/cache/" />
@@ -138,6 +136,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="temanureva: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="temanureva@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="temanureva: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="bird: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -149,7 +154,7 @@
           <entry key="css" value="33" />
           <entry key="js" value="971" />
           <entry key="php" value="1385" />
-          <entry key="sql" value="31" />
+          <entry key="sql" value="36" />
           <entry key="twig" value="919" />
           <entry key="xml" value="1" />
         </counts>
@@ -159,7 +164,7 @@
           <entry key="CSS" value="33" />
           <entry key="JavaScript" value="972" />
           <entry key="PHP" value="1385" />
-          <entry key="Scratch" value="111" />
+          <entry key="Scratch" value="116" />
           <entry key="Twig" value="918" />
           <entry key="XML" value="1" />
         </counts>
@@ -172,7 +177,7 @@
           <entry key="observation" value="2" />
           <entry key="php" value="21" />
           <entry key="sql" value="1" />
-          <entry key="twig" value="13" />
+          <entry key="twig" value="15" />
           <entry key="yaml" value="6" />
         </counts>
       </usages-collector>
@@ -183,7 +188,7 @@
           <entry key="JavaScript" value="13" />
           <entry key="PHP" value="21" />
           <entry key="Scratch" value="1" />
-          <entry key="Twig" value="13" />
+          <entry key="Twig" value="15" />
           <entry key="YAML" value="6" />
         </counts>
       </usages-collector>
@@ -208,6 +213,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/front/specie.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1935">
+              <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="das://dfeca0e7-191c-4ab6-9530-b76b212f84a9/schema/temanureva/table/bird">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -220,7 +234,7 @@
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dfeca0e7-191c-4ab6-9530-b76b212f84a9/console.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="41" selection-start-column="41" selection-end-column="41" />
+              <caret column="40" selection-start-column="40" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -576,12 +590,12 @@
       <workItem from="1537978444983" duration="6532000" />
       <workItem from="1538044852840" duration="5171000" />
       <workItem from="1538304690214" duration="12898000" />
-      <workItem from="1538898776892" duration="1429000" />
+      <workItem from="1538898776892" duration="2865000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18371000" />
+    <option name="totallyTimeSpent" value="19807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="25" width="1853" height="1055" extended-state="6" />
@@ -717,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/birds.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/BirdRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -793,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/specie.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="142" column="24" selection-start-line="141" selection-start-column="20" selection-end-line="144" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/exploAutocomplete.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -863,6 +863,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/front/birds.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/front/specie.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://dfeca0e7-191c-4ab6-9530-b76b212f84a9/schema/temanureva/table/bird">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -873,7 +887,7 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dfeca0e7-191c-4ab6-9530-b76b212f84a9/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
         </state>
       </provider>
     </entry>
