@@ -77,9 +77,6 @@
                             </div>
                         </div>
                 </div>
-                {#<div class="row margin-top z-depth-1">#}
-                    {#<div id="mapObser"></div>#}
-                {#</div>#}
             </div>
 
             {# ---- collapsible ---- #}
@@ -138,7 +135,7 @@
         <div id="species_bottom" class="row margin-top margin-bottom center">
             {% for observation in observations|slice(0,12) %}
                 <div class="col s6 m4 l2">
-                    <img id="again-mesure" src="{{ image_observation_directory}}/{{ observation.image }}" alt="photo-{{ observation.bird.vernacularName }}" class="border-teal specie-observation">
+                    <img id="species_img_observation" src="{{ image_observation_directory}}/{{ observation.image }}" alt="photo-{{ observation.bird.vernacularName }}" class="border-teal">
                     <div class="hiddendiv">
                         <div class="latitude">{{ observation.latitude }}</div>
                         <div class="longitude">{{ observation.longitude }}</div>

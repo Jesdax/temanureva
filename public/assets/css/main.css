@@ -629,9 +629,9 @@ card-title-blog{
     margin-top: 25px;
 }
 
-#again-mesure {
-    /*height: 140px;*/
-    /*width: 140px;*/
+#species_img_observation {
+    height: 130px;
+    width: 100%;
 }
 
 .card-image-species img {
