@@ -136,15 +136,14 @@ class ObservationController extends Controller
 
                 $form->handleRequest($request);
 
-                if ($form->isSubmitted() && $form->isValid()){
+                if ($form->isSubmitted() /*&& $form->isValid()*/){
                     if ($form->getClickedButton()->getName() == 'valide'){
-
                         $observationManager->valide($observation);
-                        $this->redirectToRoute('profil');
                     }
-                    elseif ($form->getClickedButton()->getName() == 'delete'){
-                        //finir la logique TODO
+                    elseif ($form->getClickedButton()->getName() == 'decline'){
+                        $observationManager->delete($observation);
                     }
+                    return $this->redirectToRoute('profil');
                 }
                 return $this->render('front/observation.html.twig',[
                     'breadcrumb' => $breadcrumb->getBreadcrumb(),

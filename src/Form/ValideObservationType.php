@@ -37,6 +37,7 @@ class ValideObservationType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Observation::class,
+            'validation_groups' => array('validation'),
         ]);
     }
 }

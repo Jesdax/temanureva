@@ -81,6 +81,7 @@ class Observation
     /**
      * @ORM\JoinColumn(name="bird", referencedColumnName="id")
      * @ORM\ManyToOne(targetEntity="App\Entity\Bird", inversedBy="observations", cascade={"persist"} )
+     * @Assert\NotBlank(groups={"validation"})
      */
     private $bird;
 
