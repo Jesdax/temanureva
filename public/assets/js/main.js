@@ -7,7 +7,7 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
 
     $('.scrollspy').scrollSpy({
-        scrollOffset: 1000,
+        scrollOffset: 300,
     });
 
     $('.collapsible').collapsible();

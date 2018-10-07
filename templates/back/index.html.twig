@@ -31,7 +31,7 @@
                 </div>
             {% endif %}
             <div class="row center-align">
-                <a class="section scrollspy link-black" href="#"><i class="medium material-icons">expand_more</i></a>
+                <a class="section scrollspy link-black" href="#linkScrollend"><i class="medium material-icons">expand_more</i></a>
             </div>
         </div>
     </div>
@@ -139,7 +139,7 @@
     </div>
 
     {% if app.user.id is same as(user.id) %}
-        <div class="row center margin-t margin-b">
+        <div class="row center margin-t margin-b" id="#presentation">
             <a href="{{ path('modify-profile') }}" class="btn btn-round btn-brown">Modifier le profil</a>
             {% if is_granted('ROLE_PARTICULAR') %}
                 <a href="{{ path('demand') }}" class="btn btn-round btn-brown">Demande naturaliste</a>
@@ -154,4 +154,6 @@
             <a href="{{ path('security_logout') }}" class="btn btn-round btn-brown">Déconnexion</a>
         </div>
     {% endif %}
+
+    <div id="linkScrollend"></div>
 {% endblock %}
