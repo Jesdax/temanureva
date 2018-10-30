@@ -42,10 +42,10 @@ class ObservationType extends AbstractType
                 'widget' =>'single_text',
             ])
 
-            ->add('address', TextType::class, [
+           /* ->add('address', TextType::class, [
                 'label' => 'Adresse',
                 'required' => false,
-            ])
+            ])*/
 
             ->add('latitude', TextType::class, [
                 'label' => 'Latitude',

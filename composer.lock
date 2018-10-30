@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "8281efc32cfb2fc8963165e599a549e4",
@@ -3245,17 +3245,6 @@
         {
             "name": "symfony/lts",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/lts.git",
-                "reference": "b5442df5a473775a3e5b34287e61570b45deb771"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/lts/zipball/b5442df5a473775a3e5b34287e61570b45deb771",
-                "reference": "b5442df5a473775a3e5b34287e61570b45deb771",
-                "shasum": ""
-            },
             "conflict": {
                 "symfony/asset": ">=5",
                 "symfony/browser-kit": ">=5",
