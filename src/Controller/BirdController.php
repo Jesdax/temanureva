@@ -32,7 +32,10 @@ class BirdController extends Controller
     const BEGIN_DISPLAY_OBSERVATION = 0;
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/liste-photos-especes-oiseaux-france/{page}/{sorting}", name="oiseaux", requirements={"page"="\d+"})
+     * @Route(
+     *     "/liste-photos-especes-oiseaux-france/{page}/{sorting}",
+     *     name="oiseaux",
+     *     requirements={"page"="\d+"})
      */
     // rajouter l'ordre de tri >>> dans l'url
     public function showAllBirds($page = 1, $sorting = 'ASC', Request $request, BirdRepository $birdRepository)
@@ -52,16 +55,18 @@ class BirdController extends Controller
             $sort = $form['sort']->getData();
 
             $sorting = $sort === 0 ? 'ASC' : 'DESC';
-            
+
             if (isset($_GET['famille'])){
                 $birds = $birdRepository->findByFamily(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $_GET['famille']);
                 $nbBirds = count($birds);
 
             } else if (isset($_GET['id'])) {
                 // find bird by id
-            } else {
                 $birds = $birdRepository->findByVernacularName(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $_GET['id']);
+            } else {
+                $birds = $birdRepository->findByVernacularName(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting);
             }
+
             $pagination = new PaginationManager($page, $nbBirds, self::NBR_BIRDS_PER_PAGE, self::PAGINATION_DISPLAY_BIRDS, 'oiseaux');
 
             return $this->render('front/birds.html.twig', [

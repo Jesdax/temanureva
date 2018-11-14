@@ -140,24 +140,7 @@ class BirdRepository extends ServiceEntityRepository
             ->getQuery()
             ->getArrayResult();
     }
-    /*public function findByDescVernacularName($offset, $limit, $sorting)
-    {
-        return $qb = $this->createQueryBuilder('b')
-            ->select('b')
-            ->setFirstResult($offset)
-            ->setMaxResults($limit)
-            ->orderBy('b.vernacularName', $sorting)
-            ->getQuery()
-            ->getResult();
-    }*/
-    /*public function countByID($id){
-        $qb = $this->createQueryBuilder('o')
-            ->innerJoin('o.bird', 'b')
-            ->where('b.id = :id')
-            ->setParameter('id', $id);
-        $qb->select($qb->expr()->count('o.id'));
-        return $qb->getQuery()->getSingleScalarResult();
-    }*/
+
     public function findByNbObservation($offset, $limit, $sorting)
     {
         $qb = $this->createQueryBuilder('b')

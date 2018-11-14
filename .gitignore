@@ -24,3 +24,10 @@ yarn-error.log
 
 ###< php-storm ###
 idea/workspace.xml
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
