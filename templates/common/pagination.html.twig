@@ -11,7 +11,7 @@
             </li>
         {% endfor %}
         <li {% if pagination.last %}class="disabled" {% endif %}>
-            <a href="{% if not pagination.last %} {{ path(pagination.route, pagination.paramRoute|merge({'page' : (pagination.position + 1) })) }}{% endif %}{% if sorting is defined %}/{{ sorting }}{% else %}{% endif %}">
+            <a href="{% if not pagination.last %} {{ path(pagination.route, pagination.paramRoute|merge({'page' : (pagination.position + 1), 'sorting': sorting? sorting:'asc'})) }}{% endif %}">
                 <i class="material-icons">chevron_right</i>
             </a>
         </li>
