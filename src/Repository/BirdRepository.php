@@ -100,6 +100,18 @@ class BirdRepository extends ServiceEntityRepository
         return $families;
     }
 
+
+    public function findOrderList($term)
+    {
+        $qb = $this->createQueryBuilder('b')
+            ->select('b.nameOrder')
+            ->where('b.nameOrder LIKE :term')
+            ->setParameter('term', '%' . $term . '%')
+            ->distinct(true);
+        $orderNames = $qb->getQuery()
+            ->getResult();
+        return $orderNames;
+    }
     /**
      * @param $offset
      * @param $limit
@@ -164,6 +176,14 @@ class BirdRepository extends ServiceEntityRepository
     public function getNumberBirds(){
         $qb = $this->createQueryBuilder('b');
         $qb->select($qb->expr()->count('b.id'));
+        return $qb->getQuery()->getSingleScalarResult();
+    }
+
+    public function getNumberBirdsPerFamily($family){
+        $qb = $this->createQueryBuilder('b');
+        $qb->select($qb->expr()->count('b.id'))
+            ->where('b.family = :family')
+            ->setParameter('family', $family);
         return $qb->getQuery()->getSingleScalarResult();
     }
 }

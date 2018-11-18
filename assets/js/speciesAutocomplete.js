@@ -14,7 +14,13 @@ var app = new Vue({
     mounted () {
         $('input#family-input').autocomplete({ //
             onAutocomplete: (v) => { // function (v) {return v} >>> on clique, ça fait quelque chose
-                window.location.replace('?famille='+v)
+                /*window.location.replace('?famille='+v)*/
+                let item = this.items.find(i => {
+                    return i.name === v
+                })
+                $('#bird_list_family').val(item.family) /*|| $('#bird_list_name_order').val(item.order) || $('#bird_list_family').val(item.family)*/
+
+
             }
         });
 

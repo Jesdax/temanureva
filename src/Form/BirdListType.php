@@ -28,8 +28,8 @@ class BirdListType extends AbstractType
     {
         $builder
 
-            /*->add('id', HiddenType::class)
-            ->add('family', HiddenType::class)*/
+            //->add('id', HiddenType::class)
+            ->add('family', TextType::class)
             ->add('sort', ChoiceType::class, [
                 'choices' => [
                     'A -Z' => Bird::SORTING_A_TO_Z,

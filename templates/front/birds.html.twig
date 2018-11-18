@@ -23,6 +23,7 @@
                             <input type="text" id="family-input"  @input="searchFamily" class="autocomplete" autocomplete="off">
                             <label for="family-input">Famille</label>
                         </div>
+                        {{ form_row(form.family) }}
                         <div class="input-field col s12">
                             <input type="text" id="bird-input"  @input="search" class="autocomplete" autocomplete="off">
                             <label for="bird-input">Nom</label>
@@ -70,7 +71,7 @@
 
     <div class="row">
         <div class="center-align">
-            {{ include('common/pagination.html.twig', {'paginaion' : pagination}) }}
+            {{ include('common/pagination.html.twig', {'pagination' : pagination}) }}
         </div>
     </div>
 {% endblock %}
