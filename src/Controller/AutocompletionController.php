@@ -56,9 +56,9 @@ class AutocompletionController extends Controller
         $term = $_GET['name'];
 
         $em = $this->getDoctrine()->getManager();
-        $familyArray = $em->getRepository(Bird::class)->findOrderList($term);
-        $responseFamily = new JsonResponse($familyArray);
+        $orderArray = $em->getRepository(Bird::class)->findOrderList($term);
+        $responseOrder = new JsonResponse($orderArray);
 
-        return $responseFamily;
+        return $responseOrder;
     }
 }

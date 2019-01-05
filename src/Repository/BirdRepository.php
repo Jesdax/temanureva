@@ -136,7 +136,7 @@ class BirdRepository extends ServiceEntityRepository
      * @param $limit
      * @param $sorting
      * @param $family
-     * @return array
+     * @return mixed
      */
     public function findByFamily($offset, $limit, $sorting, $family)
     {
@@ -150,9 +150,44 @@ class BirdRepository extends ServiceEntityRepository
             ->groupBy('b')
             ->orderBy('b.vernacularName', $sorting)
             ->getQuery()
-            ->getArrayResult();
+            ->getResult();
     }
 
+    /**
+     * @param $offset
+     * @param $limit
+     * @param $sorting
+     * @param $family
+     * @return mixed
+     */
+    public function findByOrder($offset, $limit, $sorting, $nameOrder)
+    {
+        return $qb = $this->createQueryBuilder('b')
+            ->select('b, count(o) as nbObsValid')
+            ->leftJoin('b.observations', 'o',  Expr\Join::WITH, 'o.bird = b.id AND o.status =1')
+            ->where('b.nameOrder = :nameOrder')
+            ->setFirstResult($offset)
+            ->setMaxResults($limit)
+            ->setParameter('nameOrder', $nameOrder)
+            ->groupBy('b')
+            ->orderBy('b.vernacularName', $sorting)
+            ->getQuery()
+            ->getResult();
+    }
+    /**
+     * @param $id
+     * @return array
+     */
+    public function findById($id)
+    {
+        return $qb = $this->createQueryBuilder('b')
+            ->select('b, count(o) as nbObsValid')
+            ->leftJoin('b.observations', 'o',  Expr\Join::WITH, 'o.bird = b.id AND o.status =1')
+            ->where('b.id = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getResult();
+    }
     public function findByNbObservation($offset, $limit, $sorting)
     {
         $qb = $this->createQueryBuilder('b')
@@ -163,16 +198,13 @@ class BirdRepository extends ServiceEntityRepository
             ->orderBy(count('o.bird'), $sorting);
         return $qb->getQuery()->getResult();
     }
-    /*public function findByDescNbObservation($offset, $limit)
+    public function findAllOrder()
     {
-        $qb = $this->createQueryBuilder('b')
-            ->innerJoin('b.observations', 'o')
-            ->select('b')
-            ->setFirstResult($offset)
-            ->setMaxResults($limit)
-            ->orderBy(count('o.bird'), 'DESC');
-        return $qb->getQuery()->getResult();
-    }*/
+        return $qb = $this->createQueryBuilder('b')
+            ->select('b.nameOrder')
+            ->getQuery()
+            ->getArrayResult();
+    }
     public function getNumberBirds(){
         $qb = $this->createQueryBuilder('b');
         $qb->select($qb->expr()->count('b.id'));
@@ -184,6 +216,14 @@ class BirdRepository extends ServiceEntityRepository
         $qb->select($qb->expr()->count('b.id'))
             ->where('b.family = :family')
             ->setParameter('family', $family);
+        return $qb->getQuery()->getSingleScalarResult();
+    }
+
+    public function getNumberBirdsPerOrder($nameOrder){
+        $qb = $this->createQueryBuilder('b');
+        $qb->select($qb->expr()->count('b.id'))
+            ->where('b.nameOrder = :nameOrder')
+            ->setParameter('nameOrder', $nameOrder);
         return $qb->getQuery()->getSingleScalarResult();
     }
 }

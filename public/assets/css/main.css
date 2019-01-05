@@ -490,6 +490,10 @@ card-title-blog{
     background-color: #01796F;
 }
 
+.disabled{
+    pointer-events:none;
+}
+
 /*---- header ----*/
 .header{
     position: relative;
@@ -1031,7 +1035,7 @@ footer a, footer h4 {
     padding: 0;
 }
 
-/*---- 404 page ----*/
+
 .error-text {
     font: 300 2.0em "Roboto";
 }
@@ -1040,3 +1044,5 @@ footer a, footer h4 {
     border-bottom: 3px #01796F solid;
     padding-bottom: 2.5rem;
 }
+
+/*
