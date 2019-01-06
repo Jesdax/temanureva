@@ -96,8 +96,8 @@ class BirdController extends Controller
 
             if (null!==$parameter){
                 $orderArray = $birdRepository->findOrderList($parameter);
-                $orderKey = array_search($parameter, $orderArray);
-                dump($orderArray); dump(array_column($orderArray, 'nameOrder'));dump($parameter);
+
+
                 if (in_array($parameter, array_column($orderArray, 'nameOrder'))){
                     $birds = $birdRepository->findByOrder(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $parameter);
                     $nbBirds = $birdRepository->getNumberBirdsPerOrder($parameter);

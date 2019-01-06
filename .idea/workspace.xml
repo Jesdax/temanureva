@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49f52b2c-0cab-489b-b2c2-eb455087eee1" name="Default Changelist" comment="fix error for add observation location input">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/speciesAutocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/speciesAutocomplete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AutocompletionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AutocompletionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BirdController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BirdController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/BirdListType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/BirdListType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/BirdRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/BirdRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/pagination.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/pagination.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/birds.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/birds.html.twig" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
@@ -322,82 +314,56 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.59316957">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Controller/BirdController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="186">
-                  <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="99" selection-end-column="78" />
-                  <folding>
-                    <element signature="e#114#134#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/front/birds.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="186">
-                  <caret line="18" column="73" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="88" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/common/pagination.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="338">
-                  <caret line="13" column="212" selection-start-line="13" selection-start-column="212" selection-end-line="13" selection-end-column="212" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/assets/js/app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
-                  <caret line="97" selection-start-line="97" selection-end-line="97" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Repository/BirdRepository.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1352">
-                  <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Repository/BirdRepository.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="509">
-                  <caret line="202" column="51" selection-start-line="202" selection-start-column="51" selection-end-line="202" selection-end-column="51" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Controller/AutocompletionController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="654">
-                  <caret line="64" selection-start-line="64" selection-end-line="64" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/BirdController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
+              <folding>
+                <element signature="e#114#134#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/front/birds.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="18" column="73" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/common/pagination.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="13" column="212" selection-start-line="13" selection-start-column="212" selection-end-line="13" selection-end-column="212" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repository/BirdRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1352">
+              <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -717,16 +683,15 @@
       <workItem from="1542270279728" duration="599000" />
       <workItem from="1542543552514" duration="19010000" />
       <workItem from="1542703148992" duration="1888000" />
-      <workItem from="1546680164487" duration="19218000" />
+      <workItem from="1546680164487" duration="20928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169585000" />
+    <option name="totallyTimeSpent" value="171295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="16" y="86" width="1717" height="930" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.200719" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -742,7 +707,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32972974" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32972974" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49970043" weight="0.38617885" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49970043" visible="true" weight="0.3857868" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5002996" side_tool="true" weight="0.38617885" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.29621622" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -979,13 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/BirdRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1352">
-          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/pagination.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -995,15 +953,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AutocompletionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
+        <state relative-caret-position="258">
           <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/BirdRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1352">
+          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/BirdController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="99" selection-end-column="78" />
+        <state relative-caret-position="160">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
           <folding>
             <element signature="e#114#134#0#PHP" expanded="true" />
           </folding>
