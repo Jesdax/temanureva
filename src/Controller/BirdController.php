@@ -32,10 +32,13 @@ class BirdController extends Controller
     const BEGIN_DISPLAY_OBSERVATION = 0;
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/liste-photos-especes-oiseaux-france/{page}/{sorting}", name="oiseaux", requirements={"page"="\d+"})
+     * @Route(
+     *     "/liste-photos-especes-oiseaux-france/{page}/{sorting}/{parameter}",
+     *     name="oiseaux",
+     *     requirements={"page"="\d+"})
      */
     // rajouter l'ordre de tri >>> dans l'url
-    public function showAllBirds($page = 1, $sorting = 'ASC', Request $request, BirdRepository $birdRepository)
+    public function showAllBirds($page = 1, $sorting = 'ASC', $parameter= null, Request $request, BirdRepository $birdRepository)
     {
 
         //Insert breadcrumb
@@ -52,15 +55,30 @@ class BirdController extends Controller
             $sort = $form['sort']->getData();
 
             $sorting = $sort === 0 ? 'ASC' : 'DESC';
-            
-            if (isset($_GET['famille'])){
-                $birds = $birdRepository->findByFamily(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $_GET['famille']);
-                $nbBirds = count($birds);
 
-            } else if (isset($_GET['id'])) {
-                // find bird by id
+            if ( null !== $form['family']->getData()){
+
+                $parameter = $form['family']->getData();
+                $birds = $birdRepository->findByFamily(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $parameter);
+                $nbBirds = $birdRepository->getNumberBirdsPerFamily($parameter);
+
+
+            } elseif ( null !== $form['nameOrder']->getData()) {
+
+                $parameter= $form['nameOrder']->getData();
+                $birds = $birdRepository->findByOrder(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $parameter);
+                $nbBirds = $birdRepository->getNumberBirdsPerOrder($parameter);
+
+            } else if (null !== $form['id']->getData()) {
+
+                $id = $form['id']->getData();
+                $birds = $birdRepository->findById($id);
+                $nbBirds = 1;
+
             } else {
-                $birds = $birdRepository->findByVernacularName(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $_GET['id']);
+                $birds = $birdRepository->findByVernacularName(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting);
+
+
             }
             $pagination = new PaginationManager($page, $nbBirds, self::NBR_BIRDS_PER_PAGE, self::PAGINATION_DISPLAY_BIRDS, 'oiseaux');
 
@@ -69,12 +87,30 @@ class BirdController extends Controller
                 'pagination' => $pagination,
                 'breadcrumb' => $breadcrumb->getBreadcrumb(),
                 'form' => $form->createView(),
-                'sorting' => $sorting
+                'sorting' => $sorting,
+                'parameter' => $parameter,
+
             ]);
         }
         else {
-            $birds = $birdRepository->findByVernacularName(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting);
-            $nbBirds = $birdRepository->getNumberBirds();
+
+            if (null!==$parameter){
+                $orderArray = $birdRepository->findOrderList($parameter);
+
+
+                if (in_array($parameter, array_column($orderArray, 'nameOrder'))){
+                    $birds = $birdRepository->findByOrder(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $parameter);
+                    $nbBirds = $birdRepository->getNumberBirdsPerOrder($parameter);
+                } else {
+                    $birds = $birdRepository->findByFamily(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting, $parameter);
+                    $nbBirds = $birdRepository->getNumberBirdsPerFamily($parameter);
+                }
+            } else {
+                $birds = $birdRepository->findByVernacularName(($page - 1) * self::NBR_BIRDS_PER_PAGE, self::NBR_BIRDS_PER_PAGE, $sorting);
+                $nbBirds = $birdRepository->getNumberBirds();
+            }
+
+            dump($nbBirds);dump($birds);
             //Insert pagination
             $pagination = new PaginationManager($page, $nbBirds, self::NBR_BIRDS_PER_PAGE, self::PAGINATION_DISPLAY_BIRDS, 'oiseaux');
             return $this->render('front/birds.html.twig', [
@@ -82,11 +118,13 @@ class BirdController extends Controller
                 'pagination' => $pagination,
                 'breadcrumb' => $breadcrumb->getBreadcrumb(),
                 'form' => $form->createView(),
-                'sorting' => $sorting
+                'sorting' => $sorting,
+                'parameter' => $parameter
             ]);
         }
-
     }
+
+
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/espece/{id}", name="oiseau", requirements={"id_article"="\d+"})

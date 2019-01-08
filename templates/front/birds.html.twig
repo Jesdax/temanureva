@@ -16,13 +16,20 @@
                     {{ form_start(form) }}
                     <div class="row" id="bird-autocomplete">
                         <div class="input-field col s12">
+                            <input type="text" id="order-input"  @input="searchNameOrder" class="autocomplete" autocomplete="off">
+                            <label for="order-input">Ordre</label>
+                        </div>
+                        {{ form_row(form.nameOrder) }}
+                        <div class="input-field col s12">
                             <input type="text" id="family-input"  @input="searchFamily" class="autocomplete" autocomplete="off">
                             <label for="family-input">Famille</label>
                         </div>
+                        {{ form_row(form.family) }}
                         <div class="input-field col s12">
                             <input type="text" id="bird-input"  @input="search" class="autocomplete" autocomplete="off">
-                            <label for="bird-input">Critère de recherche (Nom - Famille - Ordre)</label>
+                            <label for="bird-input">Nom</label>
                         </div>
+                        {{ form_row(form.id) }}
                         <div>
                             <!--select -->
 
@@ -66,7 +73,7 @@
 
     <div class="row">
         <div class="center-align">
-            {{ include('common/pagination.html.twig', {'paginaion' : pagination}) }}
+    {{ include('common/pagination.html.twig', {'pagination' : pagination}) }}
         </div>
     </div>
 {% endblock %}

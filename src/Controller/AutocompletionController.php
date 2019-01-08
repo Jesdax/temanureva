@@ -33,6 +33,7 @@ class AutocompletionController extends Controller
         $responseBird = new JsonResponse($birdsArray);
         return $responseBird;
     }
+
     /**
      * @Route("/familyList", name="family-list", methods={"GET"})
      */
@@ -43,7 +44,21 @@ class AutocompletionController extends Controller
         $em = $this->getDoctrine()->getManager();
         $familyArray = $em->getRepository(Bird::class)->findFamilyList($term);
         $responseFamily = new JsonResponse($familyArray);
-        //dump($responseFamily); die;
+
         return $responseFamily;
+    }
+
+    /**
+     * @Route("/orderList", name="order-list", methods={"GET"})
+     */
+    public function orderList()
+    {
+        $term = $_GET['name'];
+
+        $em = $this->getDoctrine()->getManager();
+        $orderArray = $em->getRepository(Bird::class)->findOrderList($term);
+        $responseOrder = new JsonResponse($orderArray);
+
+        return $responseOrder;
     }
 }
