@@ -25,7 +25,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class NewsletterController extends Controller
 {
     /**
-     * @Route("/abonement-newletters", name="subscribing")
+     * @Route("/abonnement-newletters", name="subscribing")
      * @Method({"POST"})
      */
     public function subscribing(Request $request, NewsletterForm $newsletterForm, EntityManagerInterface $entityManager, MailManager $mail){
@@ -48,7 +48,7 @@ class NewsletterController extends Controller
     }
 
     /**
-     * @Route("/newletters-confirmation", name="subscribe-confirmation")
+     * @Route("/newsletters-confirmation", name="subscribe-confirmation")
      * @Method({"GET"})
      */
     public function confirmation(Request $request, EntityManagerInterface $entityManager, MailManager $mail){
@@ -62,7 +62,7 @@ class NewsletterController extends Controller
                 ->setUnsubscribeToken($newsletter->getToken())
                 ->setToken(null)
                 ->setSubscribingDate(new \DateTime());
-            $this->addFlash('success', 'Votre abonnement à la newsletter confirmé');
+            $this->addFlash('success', 'Votre abonnement à la newsletter est confirmé');
             $entityManager->flush();
             $mail->sendNewsletterConfirmation($newsletter);
         }else{
@@ -72,7 +72,7 @@ class NewsletterController extends Controller
     }
 
     /**
-     * @Route("/desabonement-newletters/{token}", name="unsubscribing")
+     * @Route("/desabonnement-newletters/{token}", name="unsubscribing")
      */
     public function unsubscribing(Request $request, EntityManagerInterface $entityManager, $token){
         $newletterTarget = new Newsletter();
@@ -92,7 +92,7 @@ class NewsletterController extends Controller
                 return $this->redirectToRoute('homepage');
             }
             else{
-                $this->addFlash('decline', 'erreur dans les donnée soumis');
+                $this->addFlash('decline', 'erreur dans les données soumises');
             }
         }
 
