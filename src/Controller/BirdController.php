@@ -110,7 +110,7 @@ class BirdController extends Controller
                 $nbBirds = $birdRepository->getNumberBirds();
             }
 
-            dump($nbBirds);dump($birds);
+
             //Insert pagination
             $pagination = new PaginationManager($page, $nbBirds, self::NBR_BIRDS_PER_PAGE, self::PAGINATION_DISPLAY_BIRDS, 'oiseaux');
             return $this->render('front/birds.html.twig', [
