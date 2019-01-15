@@ -1,17 +1,17 @@
-{% if paginaion.nbrElements != 0 %}
+{% if pagination.nbrElements != 0 %}
     <ul class="pagination margin-t margin-b">
         <li {% if pagination.first %}class="disabled" {% endif %}>
-            <a href="{% if not pagination.first %}{{ path(pagination.route, pagination.paramRoute|merge({'page' : (pagination.position - 1) })) }} {% endif %}">
+            <a href="{{ path(pagination.route, pagination.paramRoute|merge({'page' : (pagination.position - 1)})) }}">
                 <i class="material-icons">chevron_left</i>
             </a>
         </li>
-        {% for i in paginaion.offset..(paginaion.offset+pagination.nbrPageDisplay-1) %}
-            <li {% if paginaion.position == i%}class="active" {% endif %}>
-                <a href="{{ path(pagination.route, pagination.paramRoute|merge({'page' : i})) }} {% if sort is defined %}/{{ sort }}{% else %}{% endif %}">{{ i }}</a>
+        {% for i in pagination.offset..(pagination.offset+pagination.nbrPageDisplay-1) %}
+            <li {% if pagination.position == i%}class="active" {% endif %}>
+                <a href="{{ path(pagination.route, pagination.paramRoute|merge({'page' : i})) }}">{{ i }}</a>
             </li>
         {% endfor %}
         <li {% if pagination.last %}class="disabled" {% endif %}>
-            <a href="{% if not pagination.last %} {{ path(pagination.route, pagination.paramRoute|merge({'page' : (pagination.position + 1) })) }} {% endif %}">
+            <a href="{% if not pagination.last %} {{ path(pagination.route, pagination.paramRoute|merge({'page' : (pagination.position + 1)})) }}{% endif %}">
                 <i class="material-icons">chevron_right</i>
             </a>
         </li>

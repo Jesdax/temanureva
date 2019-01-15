@@ -12,9 +12,24 @@ var app = new Vue({
     },
     // attendre que VueJS charge les éléments dans le DOM
     mounted () {
+        $('input#order-input').autocomplete({ //
+            onAutocomplete: (v) => { // function (v) {return v} >>> on clique, ça fait quelque chose
+                //window.location.replace('?famille='+v)
+                let item = this.items.find(i => {
+                    return i.nameOrder=== v
+                })
+                $('#bird_list_nameOrder').val(item.nameOrder)
+
+            }
+        });
         $('input#family-input').autocomplete({ //
             onAutocomplete: (v) => { // function (v) {return v} >>> on clique, ça fait quelque chose
-                window.location.replace('?famille='+v)
+                //window.location.replace('?famille='+v)
+                let item = this.items.find(i => {
+                    return i.family === v
+                })
+                $('#bird_list_family').val(item.family)
+
             }
         });
 
@@ -23,8 +38,10 @@ var app = new Vue({
                 let item = this.items.find(i => {
                     return i.name === v
                 })
-                $('#bird_list_id').val(item.id) /*|| $('#bird_list_name_order').val(item.order) || $('#bird_list_family').val(item.family)*/// il récupère l'id pour le mettre dans  #observation-bird (champ caché)
-                //tester avec l'ajout d'un autre $('#gnagna...)
+                $('#bird_list_id').val(item.id)
+                $('input#family-input').focus().val(item.family)
+                $('input#order-input').focus().val(item.order)
+
             }
         });
     },
@@ -67,6 +84,24 @@ var app = new Vue({
                     this.items.map(mapfn) // il injecte l'élément en tant que paramètre de la fonction à exécuter
 
                     $('input#family-input').autocomplete('updateData', valuesObject);
+                }
+            )
+        },
+        searchNameOrder (v) {
+            axios.get('/orderList?name='+v.target.value).then( //.then permet d'attendre la réponse de la fonction asynchrone axios.get
+                response => {
+                    $('input#order-input').css('border-bottom', '1px solid green')
+                    this.items = response.data // on récupère l'array d'objet
+                    if (this.items.length === 0){
+                        $('input#order-input').css('border-bottom', '1px solid red')
+                    }
+                    let valuesObject = {} //let : variable de bloc, uniquement utilisable dans le bloc en question; ex : for, if...
+                    let mapfn = i => { //map <=> foreach, retourne une fonction avec l'élément de l'itération en paramètre
+                        valuesObject[i.nameOrder] = ''  //pour rajouter une image >>> = i.attribut image
+                    }
+                    this.items.map(mapfn) // il injecte l'élément en tant que paramètre de la fonction à exécuter
+
+                    $('input#order-input').autocomplete('updateData', valuesObject);
                 }
             )
         }

@@ -17,7 +17,7 @@ use App\Utility\Contact;
 class MailManager
 {
     const MAIL_FROM = 'no-reply@example.fr';
-    const MAIL_CONTACT = 'contact@exmaple.fr';
+    const MAIL_CONTACT = 'contact@example.fr';
 
     private $mailer;
     private $template;
@@ -63,7 +63,7 @@ class MailManager
      */
     public function sendDemandAccept(Demand $demand){
         $to = $demand->getUser()->getEmail();
-        $subject = 'Votre demande a été accepter';
+        $subject = 'Votre demande a été acceptée';
         $body = $this->template->render('mail/demandAccept.html.twig', [
             'demand' => $demand
         ]);
@@ -78,7 +78,7 @@ class MailManager
      */
     public function sendDemandDecline(Demand $demand){
         $to = $demand->getUser()->getEmail();
-        $subject = 'Votre demande a été refusé';
+        $subject = 'Votre demande a été refusée';
         $body = $this->template->render('mail/demandDecline.html.twig', [
             'demand' => $demand
         ]);

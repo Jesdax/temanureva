@@ -1,0 +1,19 @@
+{% if pagination.nbrElements != 0 %}
+    <ul class="pagination margin-t margin-b">
+        <li {% if pagination.first %}class="disabled" {% endif %}>
+            <a href="{{ path(pagination.route, pagination.paramRoute|merge({'page' : (pagination.position - 1),  'sorting': sorting? sorting:'asc', 'parameter': parameter? parameter:''})) }}">
+                <i class="material-icons">chevron_left</i>
+            </a>
+        </li>
+        {% for i in pagination.offset..(pagination.offset+pagination.nbrPageDisplay-1) %}
+            <li {% if pagination.position == i%}class="active" {% endif %}>
+                <a href="{{ path(pagination.route, pagination.paramRoute|merge({'page' : i, 'sorting': sorting? sorting:'asc', 'parameter': parameter? parameter:''})) }}">{{ i }}</a>
+            </li>
+        {% endfor %}
+        <li {% if pagination.last %}class="disabled" {% endif %}>
+            <a href="{% if not pagination.last %} {{ path(pagination.route, pagination.paramRoute|merge({'page' : (pagination.position + 1), 'sorting': sorting? sorting:'asc', 'parameter': parameter? parameter:''})) }}{% endif %}">
+                <i class="material-icons">chevron_right</i>
+            </a>
+        </li>
+    </ul>
+{% endif %}
