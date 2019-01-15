@@ -10,7 +10,6 @@ parameters:
     demand_file_directory: '/assets/files/demand'
     image_profile_directory: '/assets/profile/img'
     image_birds_directory: '/assets/img/birds'
-    locale: 'en'
 
 services:
     # default configuration for services in *this* file
