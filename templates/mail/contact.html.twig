@@ -638,6 +638,8 @@
                                                     Nom : {{ contact.lastname }}<br>
                                                     Prénom : {{ contact.firstname }}<br>
                                                     {% if contact.phone is not empty %}
+                                                    Téléphone : {{ contact.phone }}<br>
+                                                    {% else %}
                                                     Téléphone : 01 23 45 67 89<br>
                                                     {% endif %}
                                                     <br>
