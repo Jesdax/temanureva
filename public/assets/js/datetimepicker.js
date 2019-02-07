@@ -21,7 +21,10 @@ $(document).ready(function(){
             var time = $('.timepicker').val()
             if (time) {
                 $('#observation_observation_date').val(date.getFullYear()+ '-' + date.getMonth() + '-' + date.getDate())
+
                // $('#observation_observation_date').val(date.getFullYear()+ '-' + date.getMonth() + '-' + date.getDate() + time + ':00')
+
+
             }
         },
 
@@ -37,7 +40,9 @@ $(document).ready(function(){
             dateParts = date.split('/')
             if (date) {
                 $('#observation_observation_date').val(dateParts[2] + '-' + dateParts[1] + '-' + dateParts[0])
+
                 //$('#observation_observation_date').val(dateParts[2] + '-' + dateParts[1] + '-' + dateParts[0] + time +':00')
+
             }
         },
     });

@@ -39,7 +39,8 @@ class ObservationType extends AbstractType
             ])
 
             ->add('observation_date', DateTimeType::class, [
-                'widget' =>'single_text',
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd'
             ])
 
            /* ->add('address', TextType::class, [
