@@ -11,30 +11,34 @@
                 <img src="{{ image_observation_directory}}/{{ observation.image }}" alt="photo-observation" class="responsive-img border-teal">
             </div>
             <div class="col s12 l6">
-                {% if observation.status == 0 %}
+                {% if observation.status == 0 and is_granted(['ROLE_NATURALIST', 'ROLE_ADMIN'])%}
                     {{ form_start(form) }}
                 {% endif %}
                 <div class="row">
-                    <h3 class="col s12">
+                    <h4 class="col s12">
                         {% if observation.status == 0 %}
-                            <div class="col s12 m6" id="observation-autocomplete">
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input type="text" id="autocomplete-valid-input"  @input="searchBird" class="autocomplete" autocomplete="off" placeholder=
-                                        {% if observation.bird == null %}
-                                            "Espèce non connue">
-                                        {% else %}
-                                            "{{ observation.bird.vernacularName }}">
-                                        {% endif %}
-                                        <label for="autocomplete-valid-input">Nom de l'espèce</label>
+                            {% if  is_granted(['ROLE_NATURALIST', 'ROLE_ADMIN']) %}
+                                <div class="col s12 m6" id="observation-autocomplete">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="text" id="autocomplete-valid-input"  @input="searchBird" class="autocomplete" autocomplete="off" placeholder=
+                                            {% if observation.bird == null %}
+                                                "Espèce non connue">
+                                            {% else %}
+                                                "{{ observation.bird.vernacularName }}">
+                                            {% endif %}
+                                            <label for="autocomplete-valid-input">Nom de l'espèce</label>
+                                        </div>
                                     </div>
+                                    {{ form_row(form.bird) }}
                                 </div>
-                                {{ form_row(form.bird) }}
-                            </div>
+                            {% else %}
+                                {{ observation.bird.vernacularName }}
+                            {% endif %}
                         {% else %}
                             {{ observation.bird.vernacularName }}
                         {% endif %}
-                    </h3>
+                    </h4>
                     <div class="col s12 margin-y">Observateur : <a href="{{ path('profil', {'id' : observation.observer.id}) }}">{{ observation.observer.lastname }} {{ observation.observer.firstname }}</a></div>
                     <div class="col s12 margin-y">Date d'observation : {{ observation.observationDate|date("d/m/Y") }} </div>
                     <div class="col s12 margin-y">Date d'ajout : {{ observation.addingDate|date("d/m/Y") }}</div>
@@ -43,13 +47,15 @@
                         <div class="col s12 margin-y">
                             Demande en cours de validation
                         </div>
+                        {% if is_granted(['ROLE_NATURALIST', 'ROLE_ADMIN']) %}
                         <div class="col s12 margin-y">
                             {{ form_widget(form.valide) }}
                             {{ form_widget(form.decline) }}
                         </div>
+                        {% endif %}
                     {% endif %}
                 </div>
-                {% if observation.status == 0 %}
+                {% if observation.status == 0 and is_granted(['ROLE_NATURALIST', 'ROLE_ADMIN']) %}
                     {{ form_end(form) }}
                 {% endif %}
 

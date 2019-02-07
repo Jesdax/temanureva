@@ -23,7 +23,7 @@ yarn-error.log
 ###< symfony/webpack-encore-pack ###
 
 ###< php-storm ###
-idea/workspace.xml
+.idea/workspace.xml
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/

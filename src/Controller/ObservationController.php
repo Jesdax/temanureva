@@ -41,7 +41,7 @@ class ObservationController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
-            //dump($form['bird']->getData()); die;
+            //dump($form->getData()); die;
             $em = $this->getDoctrine()->getManager();
 
             /**
@@ -150,7 +150,16 @@ class ObservationController extends Controller
                     'observation' => $observation,
                     'form' => $form->createView()
                 ]);
+            } elseif (true === $checker->isGranted(['ROLE_PARTICULAR'])) {
+
+                $form = $this->createForm(ValideObservationType::class, $observation);
+                return $this->render('front/observation.html.twig',[
+                    'breadcrumb' => $breadcrumb->getBreadcrumb(),
+                    'observation' => $observation,
+                    'form' => $form->createView()
+                ]);
             }
+
             else{
                 throw $this->createNotFoundException("Cette observation n'existe pas");
             }
