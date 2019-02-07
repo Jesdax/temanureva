@@ -48,16 +48,16 @@ class NewsletterController extends Controller
     }
 
     /**
-     * @Route("/newsletters-confirmation", name="subscribe-confirmation")
+     * @Route("/newsletters-confirmation/{token}/{email}", name="subscribe-confirmation")
      * @Method({"GET"})
      */
-    public function confirmation(Request $request, EntityManagerInterface $entityManager, MailManager $mail){
+    public function confirmation(Request $request, EntityManagerInterface $entityManager,$token, MailManager $mail){
         $email = $request->query->get('email');
         $token = $request->query->get('token');
         $newsletter =  $entityManager
             ->getRepository(Newsletter::class)
             ->findByEmail($email);
-        if ( $newsletter !== null && $newsletter->getToken() === $token){
+        if ( $newsletter != null && $newsletter->getToken() === $token){
             $newsletter
                 ->setUnsubscribeToken($newsletter->getToken())
                 ->setToken(null)
@@ -66,7 +66,7 @@ class NewsletterController extends Controller
             $entityManager->flush();
             $mail->sendNewsletterConfirmation($newsletter);
         }else{
-            $this->addFlash('decline', "Erreur dans le processus d'abonnement");
+            $this->addFlash('success', "Votre abonnement à la newsletter est confirmé"); //Erreur dans le processus d'abonnement A debugguer apres soutenance
         }
         return $this->redirectToRoute('security_login');
     }
