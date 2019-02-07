@@ -1,29 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="8636f918-758b-4ce2-b7f6-28cb835b324f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="98ff699b-ebc9-498e-aa12-c90205ee69a2" name="Default Changelist" comment="" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
+<<<<<<< HEAD
     <session id="53652915">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="xml" value="1" />
+=======
+    <session id="-2091412715">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="twig" value="3" />
+          <entry key="yaml" value="1" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< HEAD
           <entry key="XML" value="1" />
+=======
+          <entry key="Twig" value="3" />
+          <entry key="YAML" value="1" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/ObservationController.php">
@@ -76,6 +94,21 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="83">
               <caret line="69" column="113" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="113" />
+=======
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-242" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/front/observation.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
             </state>
           </provider>
         </entry>
@@ -88,8 +121,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/public/assets/js/datetimepicker.js" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/tests/BirdTest.php" />
+        <option value="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/tests/PagesTest.php" />
+        <option value="$PROJECT_DIR$/templates/mail/contact.html.twig" />
+        <option value="$PROJECT_DIR$/package-lock.json" />
+        <option value="$PROJECT_DIR$/templates/back/add_observation.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/ObservationController.php" />
+        <option value="$PROJECT_DIR$/src/Form/ObservationType.php" />
+        <option value="$PROJECT_DIR$/public/assets/js/datetimepicker.js" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
       </list>
     </option>
   </component>
@@ -206,6 +253,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
       <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
       <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
+<<<<<<< HEAD
       <path value="$PROJECT_DIR$/vendor/symfony/security" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
     </include_path>
@@ -216,12 +264,17 @@
     <option name="width" value="1717" />
     <option name="height" value="930" />
   </component>
+=======
+    </include_path>
+  </component>
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,47 +303,168 @@
               <item name="temanureva" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="DataFixtures" type="462c0819:PsiDirectoryNode" />
+=======
+      <pane id="Scope">
+        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
+          <expand>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="temanureva" type="cbb8eebc:String" user="temanureva" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="temanureva" type="cbb8eebc:String" user="temanureva" />
+              <item name=".idea" type="cbb8eebc:String" user=".idea" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="temanureva" type="cbb8eebc:String" user="temanureva" />
+              <item name="templates" type="cbb8eebc:String" user="templates" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Form" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="templates" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="templates" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="back" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="templates" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="temanureva" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="temanureva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="temanureva" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
             </path>
             <path>
               <item name="temanureva" type="b2602c69:ProjectViewProjectNode" />
               <item name="temanureva" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
             </path>
             <path>
               <item name="temanureva" type="b2602c69:ProjectViewProjectNode" />
               <item name="temanureva" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Service" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
             </path>
             <path>
               <item name="temanureva" type="b2602c69:ProjectViewProjectNode" />
               <item name="temanureva" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
             </path>
             <path>
               <item name="temanureva" type="b2602c69:ProjectViewProjectNode" />
               <item name="temanureva" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="back" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
             </path>
             <path>
               <item name="temanureva" type="b2602c69:ProjectViewProjectNode" />
               <item name="temanureva" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFixtures" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
             </path>
             <path>
               <item name="temanureva" type="b2602c69:ProjectViewProjectNode" />
               <item name="temanureva" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="common" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
             </path>
             <path>
               <item name="temanureva" type="b2602c69:ProjectViewProjectNode" />
               <item name="temanureva" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="demand" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="back" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
             </path>
             <path>
               <item name="temanureva" type="b2602c69:ProjectViewProjectNode" />
@@ -302,6 +476,7 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -336,6 +511,8 @@
           <select />
         </subPane>
       </pane>
+=======
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
     </panes>
   </component>
   <component name="RunDashboard">
@@ -355,7 +532,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="49f52b2c-0cab-489b-b2c2-eb455087eee1" name="Default Changelist" comment="" />
+=======
+      <changelist id="b5e8c19c-4c5f-446e-8929-1c5b77ec5150" name="Default Changelist" comment="" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
       <created>1536761048832</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -388,6 +569,7 @@
       <workItem from="1539485465995" duration="21123000" />
       <workItem from="1540412856595" duration="12843000" />
       <workItem from="1540850861519" duration="5131000" />
+<<<<<<< HEAD
       <workItem from="1541586245220" duration="282000" />
       <workItem from="1541668288701" duration="2882000" />
       <workItem from="1542013060658" duration="20016000" />
@@ -400,10 +582,27 @@
       <workItem from="1546854160497" duration="2214000" />
       <workItem from="1546954389622" duration="10007000" />
       <workItem from="1549527326768" duration="7070000" />
+=======
+      <workItem from="1542564233204" duration="698000" />
+      <workItem from="1542629850355" duration="819000" />
+      <workItem from="1542642847828" duration="20000" />
+      <workItem from="1542645119401" duration="22000" />
+      <workItem from="1542645181325" duration="629000" />
+      <workItem from="1542663234476" duration="189000" />
+      <workItem from="1542666853994" duration="330000" />
+      <workItem from="1542671177941" duration="760000" />
+      <workItem from="1542843201123" duration="1237000" />
+      <workItem from="1544709748488" duration="719000" />
+      <workItem from="1544893291546" duration="1360000" />
+      <workItem from="1546957276038" duration="6894000" />
+      <workItem from="1547051625690" duration="772000" />
+      <workItem from="1547563272160" duration="7609000" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="697000" />
   </component>
   <component name="ToolWindowManager">
@@ -411,6 +610,15 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20790893" />
+=======
+    <option name="totallyTimeSpent" value="288000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1920" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17432208" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -424,15 +632,24 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32972974" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32972974" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49970043" visible="true" weight="0.3857868" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5002996" side_tool="true" weight="0.38617885" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24864864" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32983193" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.29621622" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="bottom" id="TypeScript" order="14" sideWeight="0.4994664" weight="0.3293348" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+<<<<<<< HEAD
       <window_info anchor="right" id="Database" order="3" weight="0.2439825" />
+=======
+      <window_info anchor="right" id="Database" order="3" weight="0.15218595" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15218595" />
@@ -460,6 +677,7 @@
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.16214721" />
     </layout-to-restore>
   </component>
+<<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix error for add observation location input" />
     <option name="LAST_COMMIT_MESSAGE" value="fix error for add observation location input" />
@@ -479,6 +697,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret line="47" column="59" lean-forward="true" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+=======
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="108" column="14" lean-forward="true" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/back/my_observations.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/back/waiting_observation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-242" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/front/observation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+>>>>>>> 59987ae55ae8994f43b89744bbdd29872ae06716
         </state>
       </provider>
     </entry>
