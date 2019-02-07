@@ -59,9 +59,9 @@ class FrontController extends Controller
             ->findByBirdId($birdId);
 
 
-        if (null !== $observations) {
+        /*if (null !== $observations) {
             $this->addFlash('error', 'Erreur');
-        }
+        }*/
 
 
         foreach ($observations as $observation) {

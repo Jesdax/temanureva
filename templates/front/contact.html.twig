@@ -5,6 +5,7 @@
 {% block body %}
     {{ include('common/header.html.twig', {'asset' : 'assets/img/bg-contact.jpg', 'alt' : 'header_blog', 'title' : 'Nous contacter'}) }}
     {{ include('common/breadcrumb.html.twig', {'breadcrumb' : breadcrumb }) }}
+    {{ include('common/msgflash.html.twig') }}
     <div>
         <div>
             <div class="row">
