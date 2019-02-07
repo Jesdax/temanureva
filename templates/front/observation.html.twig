@@ -11,7 +11,7 @@
                 <img src="{{ image_observation_directory}}/{{ observation.image }}" alt="photo-observation" class="responsive-img border-teal">
             </div>
             <div class="col s12 l6">
-                {% if observation.status == 0 %}
+                {% if observation.status == 0 and is_granted(['ROLE_NATURALIST', 'ROLE_ADMIN'])%}
                     {{ form_start(form) }}
                 {% endif %}
                 <div class="row">
@@ -49,7 +49,7 @@
                         </div>
                     {% endif %}
                 </div>
-                {% if observation.status == 0 %}
+                {% if observation.status == 0 and is_granted(['ROLE_NATURALIST', 'ROLE_ADMIN']) %}
                     {{ form_end(form) }}
                 {% endif %}
 
