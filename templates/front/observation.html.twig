@@ -43,10 +43,12 @@
                         <div class="col s12 margin-y">
                             Demande en cours de validation
                         </div>
+                        {% if is_granted(['ROLE_NATURALIST', 'ROLE_ADMIN']) %}
                         <div class="col s12 margin-y">
                             {{ form_widget(form.valide) }}
                             {{ form_widget(form.decline) }}
                         </div>
+                        {% endif %}
                     {% endif %}
                 </div>
                 {% if observation.status == 0 and is_granted(['ROLE_NATURALIST', 'ROLE_ADMIN']) %}
