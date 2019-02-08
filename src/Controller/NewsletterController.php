@@ -51,9 +51,9 @@ class NewsletterController extends Controller
      * @Route("/newsletters-confirmation/{token}/{email}", name="subscribe-confirmation")
      * @Method({"GET"})
      */
-    public function confirmation(Request $request, EntityManagerInterface $entityManager,$token, MailManager $mail){
-        $email = $request->query->get('email');
-        $token = $request->query->get('token');
+    public function confirmation(Request $request, EntityManagerInterface $entityManager,$token, $email, MailManager $mail){
+
+
         $newsletter =  $entityManager
             ->getRepository(Newsletter::class)
             ->findByEmail($email);
